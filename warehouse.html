@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="ua">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Склады</title>
+   <link rel="stylesheet" href="css/warehouse.css" id="theme-link">
+   <link rel="shortcut icon" href="img/warehouses.png" type="image/x-icon">
+
+   <!-- /* Шрифты. Количество: 5 || Open Sans, Nunito Sans, Lato, Montserrat, Roboto */ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+<body> 
+   <script src="js/theme.js"></script>
+
+   <div class="wrapper">
+      <!--  -->
+      <header class="header">
+
+   <div class="header__container">
+
+      <div class="header__container-title">
+         <h2 class="title">Склад</h2>
+      </div>
+
+      <div class="header__container-city">
+         <div class="city">
+            <form>
+               <input type="reset" class="reset" value="Clear it!" />
+               <div class="__select" data-state="">
+                  <div class="__select__title" data-default="Option 0">Все города</div>
+                  <div class="__select__content">
+                     <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect0" class="__select__label">Все города</label>
+
+                     <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect1" class="__select__label">СПБ</label>
+
+                     <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect2" class="__select__label">Сочи</label>
+
+                     <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect3" class="__select__label">Москва</label>
+
+                     <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect4" class="__select__label">Все города</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+   </div>
+
+</header>
+      <!--  -->
+      <main class="main">
+         <!--  -->
+         <section class="sidebar">
+
+   <div class="sidebar__content">
+        <ul class="sidebar__content-list">
+         <li class="sub__list">
+            <span class="_icon-panel"></span>
+            <a href="index.html" class="sub__list-item">Панель</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-orders"></span>
+            <a href="order.html" class="sub__list-item">Заказы</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-delivery"></span>
+            <a href="delivery.html" class="sub__list-item">Доставка</a>
+         </li>
+         <li class="sub__list sub__list-active">
+            <span class="_icon-warehouses "></span>
+            <a href="warehouse.html" class="sub__list-item active-item">Склады</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-reports"></span>
+            <a href="reports.html" class="sub__list-item">Отчеты</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-calendar"></span>
+            <a href="calendar.html" class="sub__list-item">Календарь</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-settings"></span>
+            <a href="settings.html" class="sub__list-item">Управление</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="sidebar__account">
+      <div class="sidebar__account-body">
+         <picture><source srcset="img/account__logo.webp" type="image/webp"><img src="img/account__logo.png" alt="avatar"></picture>
+         <h2 class="account__name">admin</h2>
+         <a href="#" class="account__leave">Выйти</a>
+      </div>
+
+      <div class="sidebar__account-theme">
+
+         <span class="_icon-white__theme"></span>
+
+         <label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+
+         <span class="_icon-dark__theme"></span>
+
+      </div>
+
+   </div>
+
+</section>
+         <!--  -->
+         <section class="tabs">
+            <div class="tab">
+               <div class="tab__body">
+                  <!--  -->
+                  <div id="tab-1" class="tab__block">
+                     <div class="warehouse">
+
+                        <div class="warehouse__button">
+                           <button class="btn__transfer"><a href="#popup"><i class="_icon-add"></i> Передать остатки</a></button>
+                        </div>
+
+                        <div class="warehouse__content">
+
+                           <div class="warehouse__content-materials">
+
+                              <div class="warehouse__content-title">
+                                 <h4 class="warehouse-title">СТРОЙМАТЕРИАЛЫ</h4>
+                                 <div class="warehouse--number">
+                                    <h3 class="warehouse-one">Склад 1</h3>
+                                    <h3 class="warehouse-two">Склад 2</h3>
+                                    <h3 class="warehouse-three">Склад 3</h3>
+                                 </div>
+                              </div>
+
+                              <div class="warehouse__content-element">
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Гвозди</div>
+                                    <div class="warehouse__item-one">100</div>
+                                    <div class="warehouse__item-two">100</div>
+                                    <div class="warehouse__item-three">—</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Цемент</div>
+                                    <div class="warehouse__item-one">—</div>
+                                    <div class="warehouse__item-two">500</div>
+                                    <div class="warehouse__item-three">500</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Растворитель</div>
+                                    <div class="warehouse__item-one">1</div>
+                                    <div class="warehouse__item-two">—</div>
+                                    <div class="warehouse__item-three">1</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Бетон</div>
+                                    <div class="warehouse__item-one">1850</div>
+                                    <div class="warehouse__item-two">1850</div>
+                                    <div class="warehouse__item-three">1850</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Краски</div>
+                                    <div class="warehouse__item-one">560</div>
+                                    <div class="warehouse__item-two">560</div>
+                                    <div class="warehouse__item-three">560</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Шпаклевка</div>
+                                    <div class="warehouse__item-one">120</div>
+                                    <div class="warehouse__item-two">120</div>
+                                    <div class="warehouse__item-three">—</div>
+                                 </div>
+                                 <!--  -->
+                              </div>
+
+                           </div>
+
+                           <div class="warehouse__content-materials">
+
+                              <div class="warehouse__content-title">
+                                 <h4 class="warehouse-title">ИНСТРУМЕНТЫ</h4>
+                                 <!-- <div class="warehouse--number">
+                                    <h3 class="warehouse-one">Склад 1</h3>
+                                    <h3 class="warehouse-two">Склад 2</h3>
+                                    <h3 class="warehouse-three">Склад 3</h3>
+                                 </div> -->
+                              </div>
+
+                              <div class="warehouse__content-element">
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Болгарки</div>
+                                    <div class="warehouse__item-one">100</div>
+                                    <div class="warehouse__item-two">100</div>
+                                    <div class="warehouse__item-three">—</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Резаки</div>
+                                    <div class="warehouse__item-one">—</div>
+                                    <div class="warehouse__item-two">500</div>
+                                    <div class="warehouse__item-three">500</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Клавиатуры</div>
+                                    <div class="warehouse__item-one">1</div>
+                                    <div class="warehouse__item-two">—</div>
+                                    <div class="warehouse__item-three">1</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Мониторы</div>
+                                    <div class="warehouse__item-one">1850</div>
+                                    <div class="warehouse__item-two">1850</div>
+                                    <div class="warehouse__item-three">1850</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Мышки</div>
+                                    <div class="warehouse__item-one">560</div>
+                                    <div class="warehouse__item-two">560</div>
+                                    <div class="warehouse__item-three">560</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Коврики</div>
+                                    <div class="warehouse__item-one">120</div>
+                                    <div class="warehouse__item-two">120</div>
+                                    <div class="warehouse__item-three">—</div>
+                                 </div>
+                                 <!--  -->
+                              </div>
+
+                           </div>
+
+                           <div class="warehouse__content-materials">
+
+                              <div class="warehouse__content-title">
+                                 <h4 class="warehouse-title">ПРОДУКТЫ ПИТАНИЯ</h4>
+                                 <!-- <div class="warehouse--number">
+																	<h3 class="warehouse-one">Склад 1</h3>
+																	<h3 class="warehouse-two">Склад 2</h3>
+																	<h3 class="warehouse-three">Склад 3</h3>
+															 </div> -->
+                              </div>
+
+                              <div class="warehouse__content-element">
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Чай</div>
+                                    <div class="warehouse__item-one">100</div>
+                                    <div class="warehouse__item-two">100</div>
+                                    <div class="warehouse__item-three">—</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Лимоны</div>
+                                    <div class="warehouse__item-one">—</div>
+                                    <div class="warehouse__item-two">500</div>
+                                    <div class="warehouse__item-three">500</div>
+                                 </div>
+                                 <!--  -->
+                                 <div class="warehouse__item">
+                                    <div class="warehouse__item-name">Арбузы</div>
+                                    <div class="warehouse__item-one">1</div>
+                                    <div class="warehouse__item-two">—</div>
+                                    <div class="warehouse__item-three">1</div>
+                                 </div>
+                                 <!--  -->
+
+                              </div>
+
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div id="tab-2" class="tab__block">
+
+                     <div class="correction__button">
+                        <button class="btn__add"><a href="#popup2"><i class="_icon-add"></i>Добавить</a></button>
+                     </div>
+
+                     <div class="correction__header">
+                        <div class="correction__header-content">
+                           <!--  -->
+                           <div class="info-date">
+                              <h3>Дата</h3>
+                              <form action="#">
+                                 <p>
+                                    <!-- <label class="label">Все</label> -->
+                                    <select class="turnintodropdown">
+																				<option>Все</option>
+																				<option>Сегодня</option>
+																				<option>Вчера</option>
+																				<option>2 дня</option>
+																				<option>3 дня</option>
+																				<option>Неделя</option>	
+																		</select>
+                                 </p>
+                              </form>
+                           </div>
+                           <!--  -->
+                           <div class="info-correction">
+                              <h3>Тип коррекции</h3>
+                              <form action="#">
+                                 <p>
+                                    <!-- <label class="label">Все</label> -->
+                                    <select class="turnintodropdown">
+																			<option>Все</option>
+																			<option>USE</option>
+																			<option>Потеря</option>
+																			<option>Коррекция</option>
+																	</select>
+                                 </p>
+                              </form>
+                           </div>
+                           <!--  -->
+                           <div class="info-warehouse">
+                              <h3>Склад</h3>
+                              <form action="#">
+                                 <p>
+                                    <!-- <label class="label">Все</label> -->
+                                    <select class="turnintodropdown">
+																		<option>Все</option>
+																		<option>Склад 1</option>
+																		<option>Склад 2</option>
+																		<option>Склад 3</option>
+																</select>
+                                 </p>
+                              </form>
+                           </div>
+                           <!--  -->
+                           <div class="info-recipient">
+                              <h3>Получатель</h3>
+                              <form action="#">
+                                 <p>
+                                    <!-- <label class="label">Все</label> -->
+                                    <select class="turnintodropdown">
+																	<option>Все</option>
+																	<option>GRYSHA</option>
+																	<option>POLYC</option>
+																	<option>YABLOK</option>
+															</select>
+                                 </p>
+                              </form>
+                           </div>
+                           <!--  -->
+                           <div class="info-done">
+                              <h3>Оплачено</h3>
+                              <form action="#">
+                                 <p>
+                                    <!-- <label class="label">Все</label> -->
+                                    <select class="turnintodropdown">
+																<option>Все</option>
+																<option>Да</option>
+																<option>Нет</option>
+														</select>
+                                 </p>
+                              </form>
+                           </div>
+                           <!--  -->
+                           <div class="info-amount">
+                              <h3>Сумма</h3>
+                              <form action="#">
+                                 <p>
+                                    <!-- <label class="label">Все</label> -->
+                                    <select class="turnintodropdown">
+															<option>Все</option>
+															<option>8000</option>
+															<option>120000</option>
+															<option>15000</option>
+													</select>
+                                 </p>
+                              </form>
+                           </div>
+                           <!--  -->
+                           <div class="info-comment">
+                              <h3>Комментарий</h3>
+                           </div>
+                           <!--  -->
+
+                        </div>
+                     </div>
+
+                     <div class="correction">
+                        <div class="correction__content">
+
+                           <div class="correction__content-element">
+                              <div class="element-date">
+                                 <p>14 июня 2021</p>
+                              </div>
+                              <div class="element-type">
+                                 <p>USE</p>
+                              </div>
+                              <div class="element-warehouse">
+                                 <p>Склад1</p>
+                              </div>
+                              <div class="element-recipient">
+                                 <p>GRYSHA</p>
+                              </div>
+                              <div class="element-done">
+                                 <input type="checkbox" class="custom-checkbox" id="amount0" name="amount" value="yes">
+                                 <label for="amount0"></label>
+                              </div>
+                              <div class="element-amount">
+                                 <p>8000</p>
+                              </div>
+                              <div class="element-comment">
+                                 <p>В таблице нужны фильтры в виде выпадающих</p>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="correction__content-element">
+                              <div class="element-date">
+                                 <p>14 июня 2021</p>
+                              </div>
+                              <div class="element-type">
+                                 <p>USE</p>
+                              </div>
+                              <div class="element-warehouse">
+                                 <p>Склад2</p>
+                              </div>
+                              <div class="element-recipient">
+                                 <p>YABLOK</p>
+                              </div>
+                              <div class="element-done">
+                                 <input type="checkbox" class="custom-checkbox" id="amount1" name="amount" value="yes">
+                                 <label for="amount1"></label>
+                              </div>
+                              <div class="element-amount">
+                                 <p>12000</p>
+                              </div>
+                              <div class="element-comment">
+                                 <p>В таблице нужны фильтры в виде выпадающих</p>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="correction__content-element">
+                              <div class="element-date">
+                                 <p>14 июня 2021</p>
+                              </div>
+                              <div class="element-type">
+                                 <p>Потеря</p>
+                              </div>
+                              <div class="element-warehouse">
+                                 <p>Склад3</p>
+                              </div>
+                              <div class="element-recipient">
+                                 <p>POLYC</p>
+                              </div>
+                              <div class="element-done">
+                                 <input type="checkbox" class="custom-checkbox" id="amount2" name="amount" value="yes">
+                                 <label for="amount2"></label>
+                              </div>
+                              <div class="element-amount">
+                                 <p>8000</p>
+                              </div>
+                              <div class="element-comment">
+                                 <p>В таблице нужны фильтры в виде выпадающих списков</p>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="correction__content-element">
+                              <div class="element-date">
+                                 <p>14 июня 2021</p>
+                              </div>
+                              <div class="element-type">
+                                 <p>Коррекция</p>
+                              </div>
+                              <div class="element-warehouse">
+                                 <p>Склад1</p>
+                              </div>
+                              <div class="element-recipient">
+                                 <p>GRYSHA</p>
+                              </div>
+                              <div class="element-done">
+                                 <input type="checkbox" class="custom-checkbox" id="amount3" name="amount" value="yes">
+                                 <label for="amount3"></label>
+                              </div>
+                              <div class="element-amount">
+                                 <p>120000</p>
+                              </div>
+                              <div class="element-comment">
+                                 <p>В таблице нужны фильтры в виде</p>
+                              </div>
+                           </div>
+                           <!--  -->
+
+
+                        </div>
+                     </div>
+
+                  </div>
+                  <!--  -->
+                  <div id="tab-3" class="tab__block">
+
+                     <div class="product">
+
+                        <div class="product__button">
+                           <button class="btn__add"><a href="#popup3"><i class="_icon-add"></i>Добавить</a></button>
+                        </div>
+
+                        <div class="product__header">
+                           <div class="product__header-content">
+                              <!--  -->
+                              <div class="info-id">
+                                 <h3>ID</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+									<option>Все</option>
+									<option>321</option>
+									<option>123</option>
+									<option>420</option>
+							</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-name">
+                                 <h3>Название</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																					<option>Все</option>
+																					<option>Гвозди</option>
+																					<option>Цемент</option>
+																					<option>Длинноеназ</option>
+																				</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-category">
+                                 <h3>Категория</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+							<option>Все</option>
+							<option>Гвозди</option>
+							<option>Цемент</option>
+							<option>Длинноеназ</option>
+					</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-cost">
+                                 <h3>Себестоимость</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+						<option>Все</option>
+						<option>500</option>
+						<option>800</option>
+						<option>2000</option>
+				</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-quantity">
+                                 <h3>Ед.изм.</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+					<option>Все</option>
+					<option>г</option>
+					<option>шт</option>
+					<option>л</option>
+			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                        <div class="product">
+                           <div class="product__content">
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="product__content-element">
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-category">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>г</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div id="tab-4" class="tab__block">
+
+                     <div class="deliveries">
+
+                        <div class="deliveries__button">
+                           <button class="btn__add"><a href="#popup4"><i class="_icon-add"></i>Добавить</a></button>
+                        </div>
+
+                        <div class="deliveries__header">
+                           <div class="deliveries__header-content">
+                              <!--  -->
+                              <div class="info-date">
+                                 <h3>Дата</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																				 <option>Все</option>
+																				 <option>Сегодня</option>
+																				 <option>Вчера</option>
+																				 <option>3 дня</option>
+																				 <option>Неделя</option>
+																			 </select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-id">
+                                 <h3>ID</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+								<option>Все</option>
+								<option>321</option>
+								<option>123</option>
+								<option>420</option>
+						</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-product">
+                                 <h3>Товар</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																				<option>Все</option>
+																				<option>Гвозди</option>
+																				<option>Цемент</option>
+																				<option>Длинноеназ</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-quantity">
+                                 <h3>Кол-во</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																					<option>Все</option>
+																					<option>500</option>
+																					<option>800</option>
+																					<option>2000</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-units">
+                                 <h3>Ед.изм.</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+					<option>Все</option>
+					<option>г</option>
+					<option>шт</option>
+					<option>л</option>
+			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-warehouse">
+                                 <h3>Склад</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																				<option>Все</option>
+																				<option>Склад1</option>
+																				<option>Склад2</option>
+																				<option>Склад2</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-cost">
+                                 <h3>Стоимость</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																			 <option>Все</option>
+																			 <option>5000</option>
+																			 <option>8000</option>
+																			 <option>20000</option>
+																		 </select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                        <div class="deliveries">
+                           <div class="deliveries__content">
+                              <!--  -->
+                              <div class="deliveries__content-element">
+                                 <div class="element-date">
+                                    <p>14 июня 2021</p>
+                                 </div>
+                                 <div class="element-id">
+                                    <p>321</p>
+                                 </div>
+                                 <div class="element-product">
+                                    <p>Гвозди</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>500</p>
+                                 </div>
+                                 <div class="element-units">
+                                    <p>г</p>
+                                 </div>
+                                 <div class="element-warehouse">
+                                    <p>Склад1</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>5000</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="deliveries__content-element">
+                                 <div class="element-date">
+                                    <p>13 июня 2021</p>
+                                 </div>
+                                 <div class="element-id">
+                                    <p>123</p>
+                                 </div>
+                                 <div class="element-product">
+                                    <p>Цемент</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>800</p>
+                                 </div>
+                                 <div class="element-units">
+                                    <p>шт</p>
+                                 </div>
+                                 <div class="element-warehouse">
+                                    <p>Склад2</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>8000</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="deliveries__content-element">
+                                 <div class="element-date">
+                                    <p>13 июня 2021</p>
+                                 </div>
+                                 <div class="element-id">
+                                    <p>123</p>
+                                 </div>
+                                 <div class="element-product">
+                                    <p>Цемент</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>800</p>
+                                 </div>
+                                 <div class="element-units">
+                                    <p>шт</p>
+                                 </div>
+                                 <div class="element-warehouse">
+                                    <p>Склад2</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>8000</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="deliveries__content-element">
+                                 <div class="element-date">
+                                    <p>13 июня 2021</p>
+                                 </div>
+                                 <div class="element-id">
+                                    <p>123</p>
+                                 </div>
+                                 <div class="element-product">
+                                    <p>Цемент</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>800</p>
+                                 </div>
+                                 <div class="element-units">
+                                    <p>шт</p>
+                                 </div>
+                                 <div class="element-warehouse">
+                                    <p>Склад2</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>8000</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="deliveries__content-element">
+                                 <div class="element-date">
+                                    <p>13 июня 2021</p>
+                                 </div>
+                                 <div class="element-id">
+                                    <p>123</p>
+                                 </div>
+                                 <div class="element-product">
+                                    <p>Цемент</p>
+                                 </div>
+                                 <div class="element-quantity">
+                                    <p>800</p>
+                                 </div>
+                                 <div class="element-units">
+                                    <p>шт</p>
+                                 </div>
+                                 <div class="element-warehouse">
+                                    <p>Склад2</p>
+                                 </div>
+                                 <div class="element-cost">
+                                    <p>8000</p>
+                                 </div>
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                     </div>
+
+                  </div>
+                  <!--  -->
+               </div>
+               <div class="tab__item">
+                  <a href="#tab-1" class="tabs__items">Остатки</a>
+                  <a href="#tab-2" class="tabs__items">Коррекция</a>
+                  <a href="#tab-3" class="tabs__items">Товары</a>
+                  <a href="#tab-4" class="tabs__items">Поставки</a>
+               </div>
+            </div>
+         </section>
+         <!--  -->
+      </main>
+      <!--  -->
+      <div class="up">
+         <a href="#" class="up-btn"><i class="_icon-up"></i></a>
+      </div>
+      <!--  -->
+      <!--  -->
+<!-- popup #1 -->
+<div id="popup" class="popup">
+   <div class="popup__body">
+      <div class="popup__content">
+         <a href="#" class="popup__close">×</a>
+         <form action="#">
+            <p>
+               <label class="label">Отправитель</label>
+               <select class="turnintodropdown">
+								<option>Выбрать склад</option>
+								<option>Склад 1</option>
+								<option>Склад 2</option>
+								<option>Склад 3</option>
+								<option>Склад 4</option>
+							</select>
+            </p>
+         </form>
+         <form action="#">
+            <p>
+               <label class="label">Получатель</label>
+               <select class="turnintodropdown">
+							<option>Выбрать склад</option>
+							<option>Склад 1</option>
+							<option>Склад 2</option>
+							<option>Склад 3</option>
+							<option>Склад 4</option>
+						</select>
+            </p>
+         </form>
+         <form action="#">
+            <p>
+               <label class="label">Товар</label>
+               <select class="turnintodropdown">
+						<option>Выбрать товар</option>
+						<option>id123 Цемент</option>
+						<option>id123 Цемент</option>
+						<option>id123 Цемент</option>
+						<option>id123 Цемент</option>	
+					</select>
+            </p>
+         </form>
+         <form action="#" class="field">
+            <p>Кол-во</p>
+            <input class="quantity" type="text" placeholder="1800">
+            <button class="field-btn"><i class="_icon-delivered"></i> Передать</button>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- popup #1 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #2 -->
+<div id="popup2" class="popup">
+   <div class="popup__body2">
+      <div class="popup__content2">
+         <a href="#" class="popup__close2">×</a>
+
+         <div action="#" class="radio-element">
+            <div class="radio1">
+               <input class="custom-radio" name="color" type="radio" id="radio1" value="green">
+               <label for="radio1">Списание</label>
+            </div>
+            <div class="radio2">
+               <input class="custom-radio" name="color" type="radio" id="radio2" value="green">
+               <label for="radio2">Приходование</label>
+            </div>
+         </div>
+
+         <form action="#" class="date-element">
+            <label class="label-date">Дата</label>
+            <div class="menu__date">
+               <div class="menu__date-picker">
+                  <div class="date-picker__calendar"></div>
+                  <div class="date-picker__text">
+                     <span class="selected-date">Выбрать дату</span>
+                  </div>
+               </div>
+               <div class="date__wrap"></div>
+            </div>
+         </form>
+
+         <form action="#" class="correction-element">
+            <p>
+               <label class="label">Тип коррекции</label>
+               <select class="turnintodropdown">
+							 <option>Выбрать</option>
+							 <option>USE</option>
+							 <option>Потеря</option>
+							 <option>Коррекция</option>
+						 </select>
+            </p>
+         </form>
+
+         <form action="#" class="warehouse-element">
+            <p>
+               <label class="label">Склад</label>
+               <select class="turnintodropdown">
+						 <option>Выбрать</option>
+						 <option>Склад 1</option>
+						 <option>Склад 2</option>
+						 <option>Склад 3</option>
+						 <option>Склад 4</option>
+					 </select>
+            </p>
+         </form>
+
+         <form action="#" class="recipient-element">
+            <p>
+               <label class="label">Получатель</label>
+               <select class="turnintodropdown">
+					 <option>Сотрудники</option>
+					 <option>YABLOK</option>
+					 <option>POLYC</option>
+					 <option>GRYSHA</option>
+				 </select>
+            </p>
+            <input type="checkbox" class="custom-checkbox" id="paid20" name="happy" value="yes">
+            <label for="paid20">Оплачено</label>
+         </form>
+
+         <form action="#" class="product-element">
+            <label class="label">Товары</label>
+            <div class="product-content">
+               <p>
+                  <select class="turnintodropdown">
+									<option>id123 Название</option>
+									<option>id123 Название</option>
+									<option>id123 Название</option>
+									<option>id123 Название</option>
+									<option>id123 Название</option>
+									</select>
+               </p>
+               <p>
+                  <label class="label"> </label>
+                  <select class="turnintodropdown">
+		 							<option>1кг</option>
+		 							<option>1кг</option>
+		 							<option>2кг</option>
+		 							<option>3кг</option>
+		 							<option>5кг</option>
+		 							<option>10кг</option>
+ 									</select>
+               </p>
+            </div>
+            <div class="add__button">
+               <button class="target__btn"><i class="_icon-add"></i>Добавить</button>
+            </div>
+         </form>
+
+         <form action="#" class="field">
+            <p>Сумма</p>
+            <input class="quantity" type="text" placeholder="1800">
+            <button class="field-btn"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- popup #2 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #3 -->
+<div id="popup3" class="popup">
+   <div class="popup__body3">
+      <div class="popup__content3">
+         <a href="#" class="popup__close3">×</a>
+
+         <form action="#" class="name-element">
+            <div class="id-text">
+               <h3>ID</h3>
+               <p class="id__nubmer">126</p>
+            </div>
+            <div class="name">
+               <label class="">Название</label>
+               <input type="text">
+            </div>
+            <p>
+               <label class="label">Категория</label>
+               <select class="turnintodropdown">
+					<option>Выбирите катерогию</option>
+					<option>Цемент</option>
+					<option>Длинноеназ</option>
+					<option>Гвозди</option>
+				</select>
+            </p>
+         </form>
+
+         <form action="#" class="product-element">
+            <div class="product-content">
+               <div class="item-input">
+                  <label class="label">Себестоимость</label>
+                  <input type="text" value="">
+               </div>
+               <p>
+                  <label class="label">Ед.изм.</label>
+                  <select class="turnintodropdown">
+									<option>г</option>
+									<option>шт</option>
+									<option>л</option>
+									</select>
+               </p>
+            </div>
+            <div class="add__button">
+               <button class="target__btn"><i class="_icon-delivered"></i>Добавить товар</button>
+               <!-- <button class="target__btn"><i class="_icon-delivered"></i>Сохранить</button> -->
+               <!-- <button class="delete__btn"><a href="#popup5">Удалить</a></button> -->
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- popup #3 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #4 -->
+<div id="popup4" class="popup">
+   <div class="popup__body4">
+      <div class="popup__content4">
+         <a href="#" class="popup__close4">×</a>
+
+         <form action="#" class="product-element">
+            <p>
+               <label class="label">Товар</label>
+               <select class="turnintodropdown">
+				 				<option>Выбрать товар</option>
+				 				<option>id 126 Цемент</option>
+				 				<option>id 126 Цемент</option>
+				 				<option>id 126 Цемент</option>
+				 				<option>id 126 Цемент</option>
+						 	 </select>
+            </p>
+         </form>
+         <form action="#" class="input-element">
+            <label for="">Кол-во</label>
+            <input type="text" name="" id="">
+         </form>
+         <form action="#" class="warehouse-element">
+            <p>
+               <label class="label">Склад</label>
+               <select class="turnintodropdown">
+					 <option>Выбрать склад</option>
+					 <option>Склад 1</option>
+					 <option>Склад 2</option>
+					 <option>Склад 3</option>
+					 <option>Склад 4</option>
+				 </select>
+            </p>
+            <div class="menu__date">
+               <div class="menu__date-picker">
+                  <div class="date-picker__calendar"></div>
+                  <div class="date-picker__text">
+                     <span class="selected-date">Выбрать дату</span>
+                  </div>
+               </div>
+               <div class="date__wrap popup4"></div>
+            </div>
+            <div class="subtext">
+               <h3>Стоимость:</h3>
+               <h2 class="maney">12850</h2>
+            </div>
+            <button class="btn__save"><i class="_icon-delivered"></i>Сохранить</button>
+            <button class="delete__btn"><a href="#popup6">Удалить</a></button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #4 -->
+<!--  -->
+<!--  -->
+<!-- popup #5 -->
+<div id="popup5" class="popup">
+   <div class="popup__body5">
+      <div class="popup__content5">
+         <a href="#" class="popup__close5">&times;</a>
+         <div class="delete__img">
+            <picture><source srcset="img/delete.webp" type="image/webp"><img src="img/delete.png" alt="delete"></picture>
+         </div>
+         <div class="delete__title">
+            <h2 class="title">Вы хотите удалить:</h2>
+            <h2 class="sub__title">Заказ ID <span class="number" id="number">126</span></h2>
+         </div>
+         <div class="delete__btn">
+            <button class="btn__cancellation">Отмена</button>
+            <button class="btn__delet">Удалить</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- popup #5 -->
+<!--  -->
+<!--  -->
+<!-- popup #6 -->
+<div id="popup6" class="popup">
+   <div class="popup__body6">
+      <div class="popup__content6">
+         <a href="#" class="popup__close6">&times;</a>
+         <div class="delete__img">
+            <picture><source srcset="img/delete.webp" type="image/webp"><img src="img/delete.png" alt="delete"></picture>
+         </div>
+         <div class="delete__title">
+            <h2 class="title">Вы хотите удалить:</h2>
+            <h2 class="sub__title">Заказ <span class="number" id="number">G12SDASD32134</span></h2>
+         </div>
+         <div class="delete__btn">
+            <button class="btn__cancellation">Отмена</button>
+            <button class="btn__delet">Удалить</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- popup #6 -->
+<!--  -->
+      <!--  -->
+      
+   </div>
+
+<script src="js/warehouse.js" type="module"></script>
+
+</body>
+
+</html>

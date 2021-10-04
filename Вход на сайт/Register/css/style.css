@@ -1,0 +1,265 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.2;
+}
+
+ol,
+li,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 2;
+}
+
+textarea:focus,
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #131313;
+  font-family: "Open Sans";
+  color: #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #D8D8D8;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #949494;
+}
+
+body:-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #D8D8D8;
+}
+
+.wrapper {
+  min-width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.wrapper .main .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.wrapper .main .login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .main .login form .password {
+  position: relative;
+}
+
+.wrapper .main .login form .password-control {
+  position: absolute;
+  top: 24%;
+  right: 20px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/view.png) center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .main .login form .password-control.view {
+  background: url(../img/no-view.png) center no-repeat;
+  background-size: cover;
+}
+
+.wrapper .main .login form input[type=password] {
+  font: large Verdana, sans-serif;
+  color: #c4c4c4;
+}
+
+.wrapper .main .login form input {
+  font: large Verdana, sans-serif;
+  border-radius: 5px;
+  padding: 15px 50px 15px 15px;
+  width: 200px;
+  height: 48px;
+  background-color: #fff;
+  border: none;
+  margin: 0 5px;
+}
+
+.wrapper .main .login form .login-btn {
+  cursor: pointer;
+  background-color: #336CFB;
+  border: none;
+  border-radius: 10px;
+  margin: 0 5px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding: 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.wrapper .main .login form .login-btn picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .main .login form .login-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper .main .login form .login-btn:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #2E63E7;
+}
+
+.wrapper .main .login form .login-btn:focus {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #1E51D2;
+}
+
+.webp .wrapper .main .login form .password-control { background: url(../img/view.webp) center no-repeat; }
+
+.webp .wrapper .main .login form .password-control.view { background: url(../img/no-view.webp) center no-repeat; }

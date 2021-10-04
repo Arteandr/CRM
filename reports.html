@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="ua">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Отчеты</title>
+   <link rel="stylesheet" href="css/reports.css" id="theme-link">
+   <link rel="shortcut icon" href="img/reports.png" type="image/x-icon">
+
+   <!-- /* Шрифты. Количество: 5 || Open Sans, Nunito Sans, Lato, Montserrat, Roboto */ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+   <script src="js/theme.js"></script>
+
+   <div class="wrapper">
+
+      <header class="header">
+
+   <div class="header__container">
+
+      <div class="header__container-title">
+         <h2 class="title">Отчеты</h2>
+      </div>
+
+      <div class="header__container-city">
+         <div class="city">
+            <form>
+               <input type="reset" class="reset" value="Clear it!" />
+               <div class="__select" data-state="">
+                  <div class="__select__title" data-default="Option 0">Все города</div>
+                  <div class="__select__content">
+                     <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect0" class="__select__label">Все города</label>
+
+                     <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect1" class="__select__label">СПБ</label>
+
+                     <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect2" class="__select__label">Сочи</label>
+
+                     <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect3" class="__select__label">Москва</label>
+
+                     <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect4" class="__select__label">Все города</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+   </div>
+
+</header>
+
+      <main class="main">
+
+         <section class="sidebar">
+
+   <div class="sidebar__content">
+     <ul class="sidebar__content-list">
+         <li class="sub__list">
+            <span class="_icon-panel"></span>
+            <a href="index.html" class="sub__list-item">Панель</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-orders"></span>
+            <a href="order.html" class="sub__list-item">Заказы</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-delivery"></span>
+            <a href="delivery.html" class="sub__list-item">Доставка</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-warehouses"></span>
+            <a href="warehouse.html" class="sub__list-item">Склады</a>
+         </li>
+         <li class="sub__list sub__list-active">
+            <span class="_icon-reports"></span>
+            <a href="reports.html" class="sub__list-item active-item">Отчеты</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-calendar"></span>
+            <a href="calendar.html" class="sub__list-item">Календарь</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-settings"></span>
+            <a href="settings.html" class="sub__list-item">Управление</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="sidebar__account">
+      <div class="sidebar__account-body">
+         <picture><source srcset="img/account__logo.webp" type="image/webp"><img src="img/account__logo.png" alt="avatar"></picture>
+         <h2 class="account__name">admin</h2>
+         <a href="#" class="account__leave">Выйти</a>
+      </div>
+
+      <div class="sidebar__account-theme">
+
+         <span class="_icon-white__theme"></span>
+
+         <label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+
+         <span class="_icon-dark__theme"></span>
+
+      </div>
+
+   </div>
+
+</section>
+
+         <section class="tabs">
+            <div class="tab">
+               <div class="tab__body">
+
+                  <div id="tab-1" class="tab__block">
+
+                     <div class="export__import">
+                        <button class="import"><span class="_icon-download"></span>Импорт</button>
+                        <button class="export"><span class="_icon-save"></span>Экспорт</button>
+                     </div>
+
+                     <div class="statistic">
+                        <div class="statistic__box">
+
+                           <div class="statistic__box-title">
+                              <h2 class="title__logo">Прибыль</h2>
+                           </div>
+
+                           <div class="statistic__box-header">
+
+                              <div class="header__resource">
+                                 <div class="header__resource-resource">
+                                    <span class="blue"></span>
+                                    <h3>Ресурс</h3>
+                                 </div>
+                                 <div class="header__resource-telegram">
+                                    <span class="red"></span>
+                                    <h3>Телеграм</h3>
+                                 </div>
+                                 <div class="header__resource-person">
+                                    <span class="green"></span>
+                                    <h3>Личные</h3>
+                                 </div>
+                                 <div class="header__resource-gold">
+                                    <span class="gold"></span>
+                                    <h3>Gold</h3>
+                                 </div>
+                              </div>
+
+                              <div class="header__source">
+
+                                 <div class="header__source-menu">
+
+                                    <div class="info-source">
+                                       <form action="#">
+                                          <p>
+                                             <!-- <label class="label">Все</label> -->
+                                             <select class="turnintodropdown">
+																							<option>Все источники</option>
+																							<option>Телеграм</option>
+																							<option>Gold</option>
+																							<option>Личные</option>
+																							<option>Ресурс</option>
+																							</select>
+                                          </p>
+                                       </form>
+                                       <form action="#" class="view">
+                                          <p><input type="date"></p>
+                                          <p>
+                                             <h3 class="logo__view">Вид:</h3>
+                                             <div class="view__candles">
+                                                <!-- <label class="label">Все</label> -->
+                                                <select class="turnintodropdown">
+																									<option>Свечи</option>
+																									<option>Линейный</option>
+																									<option>Свечи</option>
+																							  </select>
+                                             </div>
+                                          </p>
+                                       </form>
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                           <div class="statistic__box-element">
+
+                              <div class="box__wrapper">
+
+                              </div>
+
+                              <div class="box__body">
+
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="dedlines">
+                        <div class="dedlines__box">
+
+                           <div class="dedlines__box-title">
+                              <h2 class="title__logo">Срочки</h2>
+                           </div>
+
+                           <div class="dedlines__box-header">
+
+                              <div class="dedlines-header__resource">
+                                 <div class="dedlines-header__resource-fire-one">
+                                    <span class="blue"></span>
+                                    <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                                 </div>
+                                 <div class="dedlines-header__resource-fire-two">
+                                    <span class="red"></span>
+                                    <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture><img src="img/fire.png" alt="fire"></p>
+                                 </div>
+                                 <div class="dedlines-header__resource-fire-three">
+                                    <span class="green"></span>
+                                    <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture><img src="img/fire.png" alt="fire"><img src="img/fire.png" alt="fire"></p>
+                                 </div>
+                                 <div class="dedlines-header__resource-rocket">
+                                    <span class="gold"></span>
+                                    <p><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt="rocket"></picture></p>
+                                 </div>
+                                 <div class="dedlines-header__resource-sneakers">
+                                    <span class="gold"></span>
+                                    <p><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt="rocket"></picture></p>
+                                 </div>
+
+                              </div>
+
+                              <div class="dedlines-header__source">
+
+                                 <div class="dedlines-header__source-menu">
+
+                                    <div class="info-source">
+                                       <form action="#" class="view">
+                                          <p>
+                                             <input type="date">
+                                          </p>
+                                          <h3 class="logo__view">Вид:</h3>
+                                          <div class="view__candles">
+                                             <!-- <label class="label">Все</label> -->
+                                             <select class="turnintodropdown">
+																							 <option>Свечи</option>
+																							 <option>Линейный</option>
+																							 <option>Свечи</option>
+																						 </select>
+                                          </div>
+                                       </form>
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                           <div class="dedlines__box-element">
+
+                              <div class="dedlines-box__wrapper">
+
+                              </div>
+
+                              <div class="dedlines-box__body">
+
+                              </div>
+
+                              <div class="dedlines-box__container">
+
+                              </div>
+
+                           </div>
+
+                        </div>
+                     </div>
+
+                     <div class="category">
+                        <div class="category__box">
+
+                           <div class="category__box-title">
+                              <h2 class="title__logo">Категории товаров</h2>
+                           </div>
+
+                           <div class="category__box-header">
+
+                              <div class="category-header__resource">
+                                 <div class="category-header__resource-green">
+                                    <input type="checkbox" class="custom-checkbox" id="resource1" name="resource" value="yes">
+                                    <label for="resource1"></label>
+                                    <span class="green"></span>
+                                    <h3>Стройматериалы</h3>
+                                 </div>
+                                 <div class="category-header__resource-red">
+                                    <input type="checkbox" class="custom-checkbox" id="resource2" name="resource" value="yes">
+                                    <label for="resource2"></label>
+                                    <span class="red"></span>
+                                    <h3>Садовые</h3>
+                                 </div>
+                                 <div class="category-header__resource-blue">
+                                    <input type="checkbox" class="custom-checkbox" id="resource3" name="resource" value="yes">
+                                    <label for="resource3"></label>
+                                    <span class="blue"></span>
+                                    <h3>Банные</h3>
+                                 </div>
+                                 <div class="category-header__resource-gold">
+                                    <input type="checkbox" class="custom-checkbox" id="resource4" name="resource" value="yes">
+                                    <label for="resource4"></label>
+                                    <span class="gold"></span>
+                                    <h3>Принадлежности</h3>
+                                 </div>
+                                 <div class="category-header__resource-orange">
+                                    <input type="checkbox" class="custom-checkbox" id="resource5" name="resource" value="yes">
+                                    <label for="resource5"></label>
+                                    <span class="orange"></span>
+                                    <h3>Нувсякиедругие</h3>
+                                 </div>
+                                 <div class="category-header__resource-purple">
+                                    <input type="checkbox" class="custom-checkbox" id="resource6" name="resource" value="yes">
+                                    <label for="resource6"></label>
+                                    <span class="purple"></span>
+                                    <h3>Нувсякиедругие</h3>
+                                 </div>
+                              </div>
+
+                              <div class="category-header__source">
+
+                                 <div class="category-header__source-menu">
+
+                                    <div class="category-info-source">
+                                       <form action="#" class="view">
+                                          <p>
+                                             <input type="date">
+                                          </p>
+                                          <h3 class="logo__view">Вид:</h3>
+                                          <div class="view__candles">
+                                             <!-- <label class="label">Все</label> -->
+                                             <select class="turnintodropdown">
+																							 <option>Свечи</option>
+																							 <option>Линейный</option>
+																							 <option>Свечи</option>
+																						 </select>
+                                          </div>
+                                       </form>
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                           <div class="category__box-element">
+
+                              <div class="category-box__wrapper">
+
+                              </div>
+
+                              <div class="category-box__body">
+
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="packing">
+                        <div class="packing__box">
+
+                           <div class="packing__box-title">
+                              <h2 class="title__logo">Фасовки</h2>
+                           </div>
+
+                           <div class="packing__box-header">
+
+                              <div class="packing-header__resource">
+                                 <div class="packing-header__resource-green">
+                                    <input type="checkbox" class="custom-checkbox" id="packing1" name="resource" value="yes">
+                                    <label for="packing1"></label>
+                                    <span class="green"></span>
+                                    <h3>0,3</h3>
+                                 </div>
+                                 <div class="packing-header__resource-red">
+                                    <input type="checkbox" class="custom-checkbox" id="packing2" name="resource" value="yes">
+                                    <label for="packing2"></label>
+                                    <span class="red"></span>
+                                    <h3>0,5</h3>
+                                 </div>
+                                 <div class="packing-header__resource-blue">
+                                    <input type="checkbox" class="custom-checkbox" id="packing3" name="resource" value="yes">
+                                    <label for="packing3"></label>
+                                    <span class="blue"></span>
+                                    <h3>1</h3>
+                                 </div>
+                                 <div class="packing-header__resource-gold">
+                                    <input type="checkbox" class="custom-checkbox" id="packing4" name="resource" value="yes">
+                                    <label for="packing4"></label>
+                                    <span class="gold"></span>
+                                    <h3>1,5</h3>
+                                 </div>
+                                 <div class="packing-header__resource-orange">
+                                    <input type="checkbox" class="custom-checkbox" id="packing5" name="resource" value="yes">
+                                    <label for="packing5"></label>
+                                    <span class="orange"></span>
+                                    <h3>2</h3>
+                                 </div>
+                                 <div class="packing-header__resource-purple">
+                                    <input type="checkbox" class="custom-checkbox" id="packing6" name="resource" value="yes">
+                                    <label for="packing6"></label>
+                                    <span class="purple"></span>
+                                    <h3>3</h3>
+                                 </div>
+                                 <div class="packing-header__resource-darkpurple">
+                                    <input type="checkbox" class="custom-checkbox" id="packing7" name="resource" value="yes">
+                                    <label for="packing7"></label>
+                                    <span class="darkpurple"></span>
+                                    <h3>5</h3>
+                                 </div>
+                                 <div class="packing-header__resource-whiteblue">
+                                    <input type="checkbox" class="custom-checkbox" id="packing8" name="resource" value="yes">
+                                    <label for="packing8"></label>
+                                    <span class="whiteblue"></span>
+                                    <h3>10</h3>
+                                 </div>
+                                 <div class="packing-header__resource-lightgreen">
+                                    <input type="checkbox" class="custom-checkbox" id="packing9" name="resource" value="yes">
+                                    <label for="packing9"></label>
+                                    <span class="lightgreen"></span>
+                                    <h3>20</h3>
+                                 </div>
+                                 <div class="packing-header__resource-grey">
+                                    <input type="checkbox" class="custom-checkbox" id="packing10" name="resource" value="yes">
+                                    <label for="packing10"></label>
+                                    <span class="grey"></span>
+                                    <h3>30</h3>
+                                 </div>
+                                 <div class="packing-header__resource-brown">
+                                    <input type="checkbox" class="custom-checkbox" id="packing11" name="resource" value="yes">
+                                    <label for="packing11"></label>
+                                    <span class="brown"></span>
+                                    <h3>50</h3>
+                                 </div>
+                                 <div class="packing-header__resource-pink">
+                                    <input type="checkbox" class="custom-checkbox" id="packing12" name="resource" value="yes">
+                                    <label for="packing12"></label>
+                                    <span class="pink"></span>
+                                    <h3>50+</h3>
+                                 </div>
+                                 <div class="packing-header__resource-nostandart">
+                                    <input type="checkbox" class="custom-checkbox" id="packing13" name="resource" value="yes">
+                                    <label for="packing13"></label>
+                                    <span class="nostandart"></span>
+                                    <h3>Не стандарт</h3>
+                                 </div>
+                              </div>
+
+                              <div class="packing-header__source">
+
+                                 <div class="packing-header__source-menu">
+
+                                    <div class="packing-info-source">
+                                       <form action="#" class="view">
+                                          <p>
+                                             <input type="date">
+                                          </p>
+                                          <h3 class="logo__view">Вид:</h3>
+                                          <div class="view__candles">
+                                             <!-- <label class="label">Все</label> -->
+                                             <select class="turnintodropdown">
+																									<option>Свечи</option>
+																									<option>Линейный</option>
+																									<option>Свечи</option>
+																							  </select>
+                                          </div>
+                                       </form>
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                           <div class="packing__box-element">
+
+                              <div class="packing__container">
+
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="order">
+                        <div class="order__box">
+
+                           <div class="order__box-title">
+                              <h2 class="title__logo">Заказы</h2>
+                           </div>
+
+                           <div class="order__box-header">
+
+                              <div class="order-header__resource">
+                                 <div class="order__element-radio">
+                                    <h3>Все заказы</h3>
+                                    <input class="custom-radio" name="color" type="radio" id="color-radio" value="green">
+                                    <label for="color-radio"></label>
+                                    <h2>19259</h2>
+                                 </div>
+                                 <div class="order__element-radio2">
+                                    <input class="custom-radio" name="color" type="radio" id="color-radio1" value="green">
+                                    <label for="color-radio1"></label>
+                                    <h3>По источникам:</h3>
+                                 </div>
+                                 <div class="order-header__resource-blue">
+                                    <input type="checkbox" class="custom-checkbox" id="order1" name="resource" value="yes">
+                                    <label for="order1"></label>
+                                    <div class="flex">
+                                       <div class="flex-column">
+                                          <span class="blue"></span>
+                                          <h3>Ресурс</h3>
+                                       </div>
+                                       <h5>12560</h5>
+                                    </div>
+                                 </div>
+                                 <div class="order-header__resource-red">
+                                    <input type="checkbox" class="custom-checkbox" id="order2" name="resource" value="yes">
+                                    <label for="order2"></label>
+                                    <div class="flex">
+                                       <div class="flex-column">
+                                          <span class="red"></span>
+                                          <h3>Личные</h3>
+                                       </div>
+                                       <h5>3456</h5>
+                                    </div>
+                                 </div>
+                                 <div class="order-header__resource-green">
+                                    <input type="checkbox" class="custom-checkbox" id="order3" name="resource" value="yes">
+                                    <label for="order3"></label>
+                                    <div class="flex">
+                                       <div class="flex-column">
+                                          <span class="green"></span>
+                                          <h3>Телеграм</h3>
+                                       </div>
+                                       <h5>12560</h5>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="order-header__source">
+
+                                 <div class="order-header__source-menu">
+
+                                    <div class="order-info-source">
+                                       <form action="#" class="view">
+
+                                          <h3 class="logo__view">Вид:</h3>
+                                          <div class="view__candles">
+                                             <!-- <label class="label">Все</label> -->
+                                             <select class="turnintodropdown">
+																						 <option>Свечи</option>
+																						 <option>Линейный</option>
+																						 <option>Свечи</option>
+																					 </select>
+                                          </div>
+                                          <p>
+                                             <input type="date">
+                                          </p>
+                                       </form>
+                                    </div>
+
+                                 </div>
+
+                              </div>
+
+                           </div>
+
+                           <div class="order__box-element">
+
+                              <div class="order__container">
+
+
+
+
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="salaries">
+                        <div class="salaries__box">
+
+                           <div class="salaries__box-title">
+                              <h2 class="title__logo">Курьеры - зарплаты</h2>
+                           </div>
+
+                           <div class="salaries__content">
+                              <div class="salaries__box-sidebar">
+                                 <div class="sidebar__container">
+
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle1" name="resource" value="yes">
+                                       <label for="circle1"></label>
+                                       <span class="green"></span>
+                                       <p>Все</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle2" name="resource" value="yes">
+                                       <label for="circle2"></label>
+                                       <span class="red"></span>
+                                       <p>BBB</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle3" name="resource" value="yes">
+                                       <label for="circle3"></label>
+                                       <span class="blue"></span>
+                                       <p>VVV</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle4" name="resource" value="yes">
+                                       <label for="circle4"></label>
+                                       <span class="yellow"></span>
+                                       <p>HHH</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle5" name="resource" value="yes">
+                                       <label for="circle5"></label>
+                                       <span class="orange"></span>
+                                       <p>BBB</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle6" name="resource" value="yes">
+                                       <label for="circle6"></label>
+                                       <span class="green"></span>
+                                       <p>Все</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle7" name="resource" value="yes">
+                                       <label for="circle7"></label>
+                                       <span class="red"></span>
+                                       <p>BBB</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle8" name="resource" value="yes">
+                                       <label for="circle8"></label>
+                                       <span class="blue"></span>
+                                       <p>VVV</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle9" name="resource" value="yes">
+                                       <label for="circle9"></label>
+                                       <span class="yellow"></span>
+                                       <p>HHH</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="circle10" name="resource" value="yes">
+                                       <label for="circle10"></label>
+                                       <span class="orange"></span>
+                                       <p>BBB</p>
+                                    </div>
+
+
+                                 </div>
+                              </div>
+
+                              <div class="inner__content">
+                                 <div class="salaries__box-header">
+
+                                    <div class="packing-header__source">
+
+                                       <div class="packing-header__source-menu">
+                                          <div class="packing-header__title">
+                                             <h3>Всего выплачено</h3>
+                                             <h2 class="money">2 350 420</h2>
+                                          </div>
+                                          <div class="packing-info-source">
+                                             <form action="#" class="view">
+                                                <p>
+                                                   <input type="date">
+                                                </p>
+                                             </form>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+
+                                 </div>
+
+                                 <div class="salaries__box-element">
+
+                                    <div class="salaries__container">
+
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                           </div>
+
+                        </div>
+                     </div>
+
+                     <div class="salaries">
+                        <div class="salaries__box">
+
+                           <div class="salaries__box-title">
+                              <h2 class="title__logo">Курьеры - заказы</h2>
+                           </div>
+
+                           <div class="salaries__content">
+                              <div class="salaries__box-sidebar">
+                                 <div class="sidebar__container">
+
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders1" name="resource" value="yes">
+                                       <label for="orders1"></label>
+                                       <span class="green"></span>
+                                       <p>Все</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders2" name="resource" value="yes">
+                                       <label for="orders2"></label>
+                                       <span class="red"></span>
+                                       <p>BBB</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders3" name="resource" value="yes">
+                                       <label for="orders3"></label>
+                                       <span class="blue"></span>
+                                       <p>VVV</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders4" name="resource" value="yes">
+                                       <label for="orders4"></label>
+                                       <span class="yellow"></span>
+                                       <p>HHH</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders5" name="resource" value="yes">
+                                       <label for="orders5"></label>
+                                       <span class="orange"></span>
+                                       <p>BBB</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders6" name="resource" value="yes">
+                                       <label for="orders6"></label>
+                                       <span class="green"></span>
+                                       <p>Все</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders7" name="resource" value="yes">
+                                       <label for="orders7"></label>
+                                       <span class="red"></span>
+                                       <p>BBB</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders8" name="resource" value="yes">
+                                       <label for="orders8"></label>
+                                       <span class="blue"></span>
+                                       <p>VVV</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders9" name="resource" value="yes">
+                                       <label for="orders9"></label>
+                                       <span class="yellow"></span>
+                                       <p>HHH</p>
+                                    </div>
+                                    <div class="sidebar__container-element">
+                                       <input type="checkbox" class="custom-checkbox" id="orders10" name="resource" value="yes">
+                                       <label for="orders10"></label>
+                                       <span class="orange"></span>
+                                       <p>BBB</p>
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                              <div class="inner__content">
+                                 <div class="salaries__box-header">
+
+                                    <div class="packing-header__source">
+
+                                       <div class="packing-header__source-menu">
+                                          <div class="packing-header__title">
+                                             <h3>Всего выполнено</h3>
+                                             <h2 class="money">12 420</h2>
+                                          </div>
+                                          <div class="packing-info-source">
+                                             <form action="#" class="view">
+                                                <p>
+                                                   <input type="date">
+                                                </p>
+                                             </form>
+                                          </div>
+
+                                       </div>
+
+                                    </div>
+
+                                 </div>
+
+                                 <div class="salaries__box-element">
+
+                                    <div class="salaries__container">
+
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                           </div>
+
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div id="tab-2" class="tab__block">
+                     <div class="month__year">
+                        <form action="#">
+                           <p class="month">
+                              <!-- <label class="label">Все</label> -->
+                              <select class="turnintodropdown">
+														<option>Июль</option>
+														<option>Январь</option>
+														<option>Февраль</option>
+														<option>Март</option>
+														<option>Апрель</option>
+														<option>Май</option>
+														<option>Июнь</option>
+														<option>Июль</option>
+														<option>Август</option>
+														<option>Сентябрь</option>
+														<option>Октябрь</option>
+														<option>Ноябрь</option>
+														<option>Декабрь</option>
+														</select>
+                           </p>
+                           <p class="years">
+                              <!-- <label class="label">Все</label> -->
+                              <select class="turnintodropdown">
+													<option>2021</option>
+													<option>2021</option>
+													<option>2022</option>
+													<option>2023</option>
+													<option>2024</option>
+													</select>
+                           </p>
+                           <p>
+                              <button class="copy__item"><span class="_icon-save"></span> Копировать отчет</button>
+                           </p>
+                        </form>
+                     </div>
+                     <div class="month">
+
+                        <div class="month__left">
+                           <div class="box-left">
+                              <div class="left-title">
+                                 <h2>1-15 июля</h2>
+                              </div>
+                              <div class="left__resource content">
+                                 <h2 class="content__title"><i class="_icon-resource"></i>Ресурс</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-left">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <input type="text">
+                                    </div>
+                                    <div class="salaries-left">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-left">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-left">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="left__telegram content">
+                                 <h2 class="content__title"><i class="_icon-Vector"></i>Телеграм</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-left">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <h4 class="subtitle-prceeds">14000</h4>
+                                    </div>
+                                    <div class="salaries-left">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-left">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-left">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="left__gold content">
+                                 <h2 class="content__title"><i class="_icon-gold"></i>Gold</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-left">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <h4 class="subtitle-prceeds">14000</h4>
+                                    </div>
+                                    <div class="salaries-left">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-left">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-left">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="left__person content">
+                                 <h2 class="content__title"><i class="_icon-personal"></i>Личный</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-left">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <h4 class="subtitle-prceeds">14000</h4>
+                                    </div>
+                                    <div class="salaries-left">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-left">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-left">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="container__left">
+                              <div class="container__title">
+                                 <div class="item__name-left">
+                                    <p>Имя</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item">АВАНС</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>Взял себе</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>Штрафы</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>Премия</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>Заказы</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+                              <div class="container__item-left">
+                                 <div class="item__name-left">
+                                    <p class="active__item-box">AAA</p>
+                                 </div>
+                                 <div class="item__prepaid-left">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__took-left">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__fine-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-left">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__orders-left">
+                                    <p>50000</p>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <div class="month__right">
+                           <div class="box-right">
+                              <div class="right-title">
+                                 <h2>16-31 июля</h2>
+                              </div>
+                              <div class="right__resource content">
+                                 <h2 class="content__title"><i class="_icon-resource"></i>Ресурс</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-right">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <input type="text">
+                                    </div>
+                                    <div class="salaries-right">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-right">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-right">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="right__telegram content">
+                                 <h2 class="content__title"><i class="_icon-Vector"></i>Телеграм</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-right">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <h4 class="subtitle-prceeds">14000</h4>
+                                    </div>
+                                    <div class="salaries-right">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-right">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-right">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="right__gold content">
+                                 <h2 class="content__title"><i class="_icon-gold"></i>Gold</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-right">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <h4 class="subtitle-prceeds">14000</h4>
+                                    </div>
+                                    <div class="salaries-right">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-right">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-right">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="right__person content">
+                                 <h2 class="content__title"><i class="_icon-personal"></i>Личный</h2>
+                                 <div class="content__inner">
+                                    <div class="proceeds-right">
+                                       <h3 class="title-prceeds">Выручка</h3>
+                                       <h4 class="subtitle-prceeds">14000</h4>
+                                    </div>
+                                    <div class="salaries-right">
+                                       <h3 class="title-salaries">Оклады</h3>
+                                       <h4 class="subtitle-salaries">14000</h4>
+                                    </div>
+                                    <div class="profit-right">
+                                       <h3 class="title-profit">Прибыль</h3>
+                                       <h4 class="subtitle-profit">21000</h4>
+                                    </div>
+                                    <div class="half-right">
+                                       <h3 class="title-half">50% прибыли</h3>
+                                       <h4 class="subtitle-half">14000</h4>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="container__right">
+
+                              <div class="container__title">
+                                 <div class="item__name-right">
+                                    <p class="active__item">ОКЛАД</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>Взял себе</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>Штрафы</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>Премия</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>Заказы</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+																	<p>Заказы</p>
+															 </div> -->
+                              </div>
+
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+																	<p>50000</p>
+															 </div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+																 <p>50000</p>
+															</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+															 <p>50000</p>
+														</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+														 <p>50000</p>
+													</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+													 <p>50000</p>
+												</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+												 <p>50000</p>
+											</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+											 <p>50000</p>
+										</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+										 <p>50000</p>
+									</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+									 <p>50000</p>
+								</div> -->
+                              </div>
+                              <div class="container__item-right">
+                                 <div class="item__name-right">
+                                    <p class="active__item-box">120000</p>
+                                 </div>
+                                 <div class="item__prepaid-right">
+                                    <p>14000</p>
+                                 </div>
+                                 <div class="item__took-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__fine-right">
+                                    <p>5000</p>
+                                 </div>
+                                 <div class="item__prize-right">
+                                    <p>50000</p>
+                                 </div>
+                                 <!-- <div class="item__orders-right">
+								 <p>50000</p>
+							</div> -->
+                              </div>
+
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div id="tab-3" class="tab__block">
+                     <div class="consumables">
+                        <div class="consumables__year">
+                           <form action="#">
+                              <p class="month">
+                                 <!-- <label class="label">Все</label> -->
+                                 <select class="turnintodropdown">
+														<option>Июль</option>
+														<option>Январь</option>
+														<option>Февраль</option>
+														<option>Март</option>
+														<option>Апрель</option>
+														<option>Май</option>
+														<option>Июнь</option>
+														<option>Июль</option>
+														<option>Август</option>
+														<option>Сентябрь</option>
+														<option>Октябрь</option>
+														<option>Ноябрь</option>
+														<option>Декабрь</option>
+														</select>
+                              </p>
+                              <p class="years">
+                                 <!-- <label class="label">Все</label> -->
+                                 <select class="turnintodropdown">
+													<option>2021</option>
+													<option>2021</option>
+													<option>2022</option>
+													<option>2023</option>
+													<option>2024</option>
+													</select>
+                              </p>
+                              <p>
+                                 <button class="arrow"><i class="_icon-arrow__prev"></i></button>
+                                 <button class="arrow"><i class="_icon-arrow__next"></i></button>
+                              </p>
+                              <p>
+                                 <button class="copy__item"><a href="#popup"><i class="_icon-add"></i>Добавить</a></button>
+                              </p>
+                           </form>
+                        </div>
+                        <div class="consumables__box">
+
+                           <div class="consumables__box-header">
+                              <div class="header-date">
+                                 <form action="#">
+                                    <p>
+                                       <h3>Дата</h3>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																				<option>Все</option>
+																				<option>Сегодня</option>
+																				<option>Вчера</option>
+																				<option>3 дня</option>
+																				<option>Неделя</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <div class="header-amount">
+                                 <form action="#">
+                                    <p>
+                                       <h3>Сумма</h3>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																			<option>Все</option>
+																			<option>25000</option>
+																			<option>5000</option>
+																			<option>1000</option>
+																			<option>100000</option>
+																		</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <div class="header-comment">
+                                 <h3>Коммментарий</h3>
+                              </div>
+                           </div>
+                           <div class="consumables__box-content">
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                              <div class="content__item">
+                                 <div class="content__date">
+                                    <h3>14 июня 2021</h3>
+                                 </div>
+                                 <div class="content__amount">
+                                    <h3>25000</h3>
+                                 </div>
+                                 <div class="content__comment">
+                                    <h3>В таблице нужны фильтры в виде выпадающих</h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+               <div class="tab__item">
+                  <a href="#tab-1" class="tabs__items">Статистика</a>
+                  <a href="#tab-2" class="tabs__items">Зарплата</a>
+                  <a href="#tab-3" class="tabs__items">Раходники</a>
+               </div>
+            </div>
+         </section>
+
+      </main>
+
+      <div class="up">
+         <a href="#" class="up-btn"><i class="_icon-up"></i></a>
+      </div>
+
+      <!--  -->
+<!-- popup #1 -->
+<div id="popup" class="popup">
+   <div class="popup__body">
+      <div class="popup__content">
+         <a href="#" class="popup__close">&times;</a>
+         <form action="#">
+            <h3>Дата</h3>
+            <div class="menu__date">
+               <div class="menu__date-picker">
+                  <div class="date-picker__calendar"></div>
+                  <div class="date-picker__text">
+                     <span class="selected-date">Выбрать дату</span>
+                  </div>
+               </div>
+               <div class="date__wrap"></div>
+            </div>
+            <h3>Сумма</h3>
+            <input type="text">
+            <h3>Коммментарий</h3>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button class="field-btn"><i class="_icon-delivered"></i>Добавить</button>
+            <button class="delete__btn"><a href="#popup2">Удалить</a></button>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- popup #1 -->
+<!--  -->
+<!--  -->
+<!-- popup #2 -->
+<div id="popup2" class="popup">
+   <div class="popup__body2">
+      <div class="popup__content2">
+         <a href="#" class="popup__close2">&times;</a>
+         <div class="delete__img">
+            <picture><source srcset="img/delete.webp" type="image/webp"><img src="img/delete.png" alt="delete"></picture>
+         </div>
+         <div class="delete__title">
+            <h2 class="title">Вы хотите удалить:</h2>
+            <h2 class="sub__title">Дату
+               <span class="date" id="date">13 июня 2021</span></h2>
+         </div>
+         <div class="delete__btn">
+            <button class="btn__cancellation">Отмена</button>
+            <button class="btn__delet">Удалить</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- popup #2 -->
+<!--  -->
+
+      
+   </div>
+
+   <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+
+<script src="js/reports.js" type="module"></script>
+
+</body>
+
+</html>

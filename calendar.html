@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="ua">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Календарь</title>
+   <link rel="stylesheet" href="css/calendar.css" id="theme-link">
+   <link rel="shortcut icon" href="img/calendar.png" type="image/x-icon">
+
+   <!-- /* Шрифты. Количество: 5 || Open Sans, Nunito Sans, Lato, Montserrat, Roboto */ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+   <script src="js/theme.js"></script>
+   <div class="wrapper">
+      <header class="header">
+
+   <div class="header__container">
+
+      <div class="header__container-title">
+         <h2 class="title">Календарь</h2>
+      </div>
+
+      <div class="header__container-city">
+         <div class="city">
+            <form>
+               <input type="reset" class="reset" value="Clear it!" />
+               <div class="__select" data-state="">
+                  <div class="__select__title" data-default="Option 0">Все города</div>
+                  <div class="__select__content">
+                     <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect0" class="__select__label">Все города</label>
+
+                     <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect1" class="__select__label">СПБ</label>
+
+                     <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect2" class="__select__label">Сочи</label>
+
+                     <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect3" class="__select__label">Москва</label>
+
+                     <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect4" class="__select__label">Все города</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+
+
+      <div class="header__container-month">
+         <div class="month">
+            <form action="#">
+               <p>
+                  <select class="turnintodropdown">
+								<option>Июль</option>
+								<option>Январь</option>
+								<option>Февраль</option>	
+								<option>Март</option>	
+								<option>Апрель</option>	
+								<option>Май</option>	
+								<option>Июнь</option>	
+								<option>Июль</option>	
+								<option>Август</option>	
+								<option>Сентябрь</option>	
+								<option>Октябрь</option>	
+								<option>Ноябрь</option>	
+								<option>Декабрь</option>	
+								</select>
+               </p>
+            </form>
+         </div>
+      </div>
+
+      <div class="header__container-year">
+         <div class="year">
+            <form action="#">
+               <p>
+                  <select class="turnintodropdown">
+						 <option>2021</option>
+						 <option>2022</option>
+						 <option>2023</option>
+						 </select>
+               </p>
+            </form>
+         </div>
+      </div>
+
+      <div class="header__container-button">
+         <div class="button">
+            <a href="#" class="button-left"><i class="_icon-arrow__prev"></i></a>
+            <a href="#" class="button-right"><i class="_icon-arrow__next"></i></a>
+         </div>
+      </div>
+
+   </div>
+
+</header>
+      <main class="main">
+         <section class="sidebar">
+
+   <div class="sidebar__content">
+    <ul class="sidebar__content-list">
+         <li class="sub__list">
+            <span class="_icon-panel"></span>
+            <a href="index.html" class="sub__list-item">Панель</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-orders"></span>
+            <a href="order.html" class="sub__list-item">Заказы</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-delivery"></span>
+            <a href="delivery.html" class="sub__list-item">Доставка</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-warehouses"></span>
+            <a href="warehouse.html" class="sub__list-item">Склады</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-reports"></span>
+            <a href="reports.html" class="sub__list-item">Отчеты</a>
+         </li>
+         <li class="sub__list sub__list-active">
+            <span class="_icon-calendar"></span>
+            <a href="calendar.html" class="sub__list-item active-item">Календарь</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-settings"></span>
+            <a href="settings.html" class="sub__list-item">Управление</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="sidebar__account">
+      <div class="sidebar__account-body">
+         <picture><source srcset="img/account__logo.webp" type="image/webp"><img src="img/account__logo.png" alt="avatar"></picture>
+         <h2 class="account__name">admin</h2>
+         <a href="#" class="account__leave">Выйти</a>
+      </div>
+
+      <div class="sidebar__account-theme">
+
+         <span class="_icon-white__theme"></span>
+
+         <label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+
+         <span class="_icon-dark__theme"></span>
+
+      </div>
+
+   </div>
+
+</section>
+         <!--  -->
+         <section class="calendar">
+            <div class="calendar__content">
+               <div class="calendar__content-week">
+                  <div class="week__element">
+                     <p>ПН</p>
+                  </div>
+                  <div class="week__element">
+                     <p>ВТ</p>
+                  </div>
+                  <div class="week__element">
+                     <p>СР</p>
+                  </div>
+                  <div class="week__element">
+                     <p>ЧТ</p>
+                  </div>
+                  <div class="week__element">
+                     <p>ПТ</p>
+                  </div>
+                  <div class="week__element">
+                     <p>СБ</p>
+                  </div>
+                  <div class="week__element">
+                     <p>ВС</p>
+                  </div>
+               </div>
+               <div class="calendar__content-wrapper">
+                  <div class="calendar__element" style="border-radius: 10px 0 0 0;">
+                     <div class="calendar__element-body">
+                        <p class="point-day">1</p>
+                        <p class="point-done"><input id="day-1" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-1"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">2</p>
+                        <p class="point-done"><input id="day-2" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-2"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">3</p>
+                        <p class="point-done"><input id="day-3" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-3"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">4</p>
+                        <p class="point-done"><input id="day-4" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-4"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">5</p>
+                        <p class="point-done"><input id="day-5" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-5"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">6</p>
+                        <p class="point-done"><input id="day-6" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-6"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element" style="border-radius: 0 10px 0 0;">
+                     <div class="calendar__element-body">
+                        <p class="point-day">7</p>
+                        <p class="point-done"><input id="day-7" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-7"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">8</p>
+                        <p class="point-done"><input id="day-8" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-8"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">9</p>
+                        <p class="point-done"><input id="day-9" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-9"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element point-active">
+                     <div class="calendar__element-body">
+                        <p class="point-day ">10</p>
+                        <p class="point-done"><input id="day-10" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-10"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">11</p>
+                        <p class="point-done"><input id="day-11" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-11"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">12</p>
+                        <p class="point-done"><input id="day-12" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-12"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">13</p>
+                        <p class="point-done"><input id="day-13" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-13"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">14</p>
+                        <p class="point-done"><input id="day-14" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-14"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">15</p>
+                        <p class="point-done"><input id="day-15" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-15"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">16</p>
+                        <p class="point-done"><input id="day-16" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-16"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">17</p>
+                        <p class="point-done"><input id="day-17" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-17"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">18</p>
+                        <p class="point-done"><input id="day-18" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-18"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">19</p>
+                        <p class="point-done"><input id="day-19" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-19"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">20</p>
+                        <p class="point-done"><input id="day-20" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-20"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">21</p>
+                        <p class="point-done"><input id="day-21" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-21"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">22</p>
+                        <p class="point-done"><input id="day-22" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-22"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">23</p>
+                        <p class="point-done"><input id="day-23" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-23"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">24</p>
+                        <p class="point-done"><input id="day-24" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-24"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">25</p>
+                        <p class="point-done"><input id="day-25" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-25"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">26</p>
+                        <p class="point-done"><input id="day-26" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-26"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">27</p>
+                        <p class="point-done"><input id="day-27" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-27"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">28</p>
+                        <p class="point-done"><input id="day-28" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-28"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element" style="border-radius: 0 0 0 10px;">
+                     <div class="calendar__element-body">
+                        <p class="point-day">29</p>
+                        <p class="point-done"><input id="day-29" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-29"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">30</p>
+                        <p class="point-done"><input id="day-30" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-30"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                     <div class="calendar__element-body">
+                        <p class="point-day">31</p>
+                        <p class="point-done"><input id="day-31" type="checkbox" class="custom-checkbox" name="happy" value="yes">
+                           <label for="day-31"></label></p>
+                     </div>
+                     <div class="calendar__element-wrapper">
+                        <p class="point-one">12</p>
+                        <p class="point-two">15</p>
+                        <p class="point-three">2</p>
+                        <p class="point-four">x</p>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element">
+                  </div>
+                  <!--  -->
+                  <div class="calendar__element" style="border-radius: 0 0 10px 0;">
+                  </div>
+                  <!--  -->
+
+
+               </div>
+            </div>
+         </section>
+         <!--  -->
+         <div class="couriers">
+            <div class="couriers__content">
+               <div class="couriers__content-title">
+                  <h2 class="logo__title"><i class="_icon-courier"></i>Курьеры</h2>
+               </div>
+               <div class="couriers__content-table">
+
+                  <div class="table__element-logo">
+                     <div class="table__element-logo">
+                        <p class="table__name-logo">Имя</p>
+                     </div>
+                     <div class="table__element-logo">
+                        <p class="table__change-logo">Смены</p>
+                     </div>
+                     <div class="table__element-logo">
+                        <p class="table__salary-logo">Зарплата</p>
+                     </div>
+                  </div>
+
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">145</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">ABC</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">456</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">ASD</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">145</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">ABC</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">456</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">ASD</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">145</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">ABC</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">456</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+                  <div class="table__element">
+                     <div class="table__element-item">
+                        <p class="table__name">ASD</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__change">14</p>
+                     </div>
+                     <div class="table__element-item">
+                        <p class="table__salary">14000</p>
+                     </div>
+                  </div>
+
+
+
+               </div>
+            </div>
+         </div>
+         <!--  -->
+         <div class="sidebar-right">
+
+            <div class="operators">
+               <div class="operators__content">
+                  <div class="operators__content-title">
+                     <h2 class="logo__title"><i class="_icon-operator"></i>Операторы</h2>
+                  </div>
+
+                  <div class="operators__content-table">
+
+                     <div class="operators__info">
+                        <p class="info__name">Имя</p>
+                        <p class="info__change">Смена</p>
+                        <p class="info__salary">Зарплата</p>
+                     </div>
+
+                     <div class="operators__table">
+                        <div class="operators__table-element">
+                           <p class="operators__name style=" border-radius: 10px 0 0 0; "">GRYSHA</p>
+                           <p class="operators__change">15,5</p>
+                           <p class="operators__salary" style="border-radius: 0 10px 0 0;">80000</p>
+                        </div>
+                        <div class="operators__table-element">
+                           <p class="operators__name" style="border-radius: 0 0 0 10px;">YABLOK</p>
+                           <p class="operators__change">28</p>
+                           <p class="operators__salary" style="border-radius: 0 0 10px 0;">35000</p>
+                        </div>
+
+                     </div>
+
+
+                  </div>
+
+                  <div class="operators__content-salary">
+                     <h2 class="salary__logo">Оклад:</h2>
+                     <p class="money">5000</p>
+                     <a class="salary__link" href="#">изменить</a>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="warehouse">
+
+               <div class="warehouse__content">
+                  <div class="warehouse__content-title">
+                     <h2 class="logo__title"><i class="_icon-warehouse"></i>Склад</h2>
+                  </div>
+
+                  <div class="warehouse__content-table">
+
+                     <div class="warehouse__info">
+                        <p class="info__name">Имя</p>
+                        <p class="info__quantity">Оклад</p>
+                        <p class="info__prepaid">Аванс</p>
+                        <p class="info__salary">Зарплата</p>
+                     </div>
+
+
+                     <div class="warehouse__table">
+                        <div class="warehouse__table-element">
+                           <p class="warehouse__name" style="border-radius: 10px 0 0 0;">GRYSHA</p>
+                           <p class="warehouse__change">15 из 15</p>
+                           <p class="warehouse__change">15 из 16</p>
+                           <p class="warehouse__salary" style="border-radius: 0 10px 0 0;">80000</p>
+                        </div>
+                        <div class="warehouse__table-element">
+                           <p class="warehouse__name" style="border-radius: 0 0 0 10px;">YABLOK</p>
+                           <p class="warehouse__change">15 из 15</p>
+                           <p class="warehouse__change">14 из 16</p>
+                           <p class="warehouse__salary" style="border-radius: 0 0 10px 0;">35000</p>
+                        </div>
+                     </div>
+
+                  </div>
+
+
+                  <div class="warehouse__content-salary">
+                     <div class="content__sub">
+                        <h2 class="warehouse-salary__logo">Оклад:</h2>
+                        <p class="warehouse-money">5000</p>
+                        <a class="warehouse-salary__link" href="#">изменить</a>
+                     </div>
+                     <div class="content__sub">
+                        <h2 class="warehouse-salary__logo">Аванс:</h2>
+                        <p class="warehouse-money">5000</p>
+                        <a class="warehouse-salary__link" href="#">изменить</a>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="central">
+
+               <div class="central__content">
+                  <div class="central__content-title">
+                     <h2 class="logo__title"><i class="_icon-center__warehouse"></i>Центр.склад</h2>
+                  </div>
+
+                  <div class="central__content-table">
+
+                     <div class="central__info">
+                        <p class="info__name">Имя</p>
+                        <p class="info__change">Смены</p>
+                        <p class="info__salary">Зарплата</p>
+                     </div>
+
+                     <div class="central__table">
+                        <div class="central__table-element">
+                           <p class="central__name" style="border-radius: 10px 0 0 0;">SOTR1</p>
+                           <p class="central__change">15,5</p>
+                           <p class="central__salary" style="border-radius: 0 10px 0 0;">80000</p>
+                        </div>
+                        <div class="central__table-element">
+                           <p class="central__name" style="border-radius: 0 0 0 10px;">SOTR1</p>
+                           <p class="central__change">12</p>
+                           <p class="central__salary" style="border-radius: 0 0 10px 0;">35000</p>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="central__content-salary">
+                     <h2 class="central-salary__logo">Бюджет:</h2>
+                     <p class="central-money">5000</p>
+                     <a class="central-salary__link" href="#">изменить</a>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="logistician">
+
+               <div class="logistician__content">
+
+                  <div class="logistician__content-title">
+                     <h2 class="logo__title"><i class="_icon-logistician"></i>Логист</h2>
+                  </div>
+
+                  <div class="logistician__content-table">
+
+                     <div class="logistician__info">
+                        <p class="info__name">Имя</p>
+                        <p class="info__quantity">Оклад</p>
+                        <p class="info__prepaid">Аванс</p>
+                        <p class="info__salary">Зарплата</p>
+                     </div>
+
+
+                     <div class="logistician__table">
+                        <div class="logistician__table-element">
+                           <p class="logistician__name" style="border-radius: 10px 0 0 0;">GRYSHA</p>
+                           <p class="logistician__change">15 из 15</p>
+                           <p class="logistician__change">15 из 16</p>
+                           <p class="logistician__salary" style="border-radius: 0 10px 0 0;">80000</p>
+                        </div>
+                        <div class="logistician__table-element">
+                           <p class="logistician__name" style="border-radius: 0 0 0 10px;">YABLOK</p>
+                           <p class="logistician__change">15 из 15</p>
+                           <p class="logistician__change">14 из 16</p>
+                           <p class="logistician__salary" style="border-radius: 0 0 10px 0;">35000</p>
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="logistician__content-salary">
+                     <div class="content__sub">
+                        <h2 class="logistician-salary__logo">Оклад:</h2>
+                        <p class="logistician-money">5000</p>
+                        <a class="logistician-salary__link" href="#">изменить</a>
+                     </div>
+                     <div class="content__sub">
+                        <h2 class="logistician-salary__logo">Аванс:</h2>
+                        <p class="logistician-money">5000</p>
+                        <a class="logistician-salary__link" href="#">изменить</a>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+         </div>
+         <!--  -->
+         <div class="container">
+            <div class="container__content">
+               <!--  -->
+               <div class="container__content-operator">
+
+                  <div class="operatop__content">
+                     <h2 class="operatop__content-title"><i class="_icon-operator"></i>Операторы</h2>
+                  </div>
+
+                  <div class="operatop__item">
+                     <h2 class="operator-name">GRYSHA</h2>
+                     <div class="operatop-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+															 <option>Статус</option>
+															 <option>Работае</option>
+															 <option>Выходной</option>	
+													 		</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="operator__element">
+                        <div class="operator__element-prize">
+                           <li class="prize-item">
+                              <p class="prize"><i class="_icon-star"></i>Премия</p>
+                              <ul class="hover__item">
+                                 <p class="text">Побил оператора который шкурил +5000</p>
+                              </ul>
+                           </li>
+                        </div>
+                        <div class="operator__element-fine">
+                           <li class="fine-item">
+                              <p class="fine"><i class="_icon-fine"></i>Штраф</p>
+                              <ul class="hover__item">
+                                 <p class="text">Сошкурил мк -1000</p>
+                              </ul>
+                           </li>
+                        </div>
+                        <div class="operator__element-fine"></div>
+
+                     </div>
+
+                     <div class="operator__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+
+                  <div class="operatop__item">
+                     <h2 class="operator-name">YABLOK</h2>
+                     <div class="operatop-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+                     <div class="operator__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!--  -->
+               <div class="container__content-warehouse">
+
+                  <div class="warehouse__content">
+                     <h2 class="warehouse__content-title"><i class="_icon-warehouse"></i>Склад</h2>
+                  </div>
+
+                  <div class="warehouse__item">
+                     <h2 class="warehouse-name">GRYSHA</h2>
+                     <div class="warehouse-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="warehouse__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="warehouse__item">
+                     <h2 class="warehouse-name">YABLOK</h2>
+                     <div class="warehouse-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="warehouse__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+
+
+               </div>
+               <!--  -->
+               <div class="container__content-central">
+
+                  <div class="central__content">
+                     <h2 class="central__content-title"><i class="_icon-center__warehouse"></i>Центр.склад</h2>
+                  </div>
+
+                  <div class="central__item">
+                     <h2 class="central-name">GRYSHA</h2>
+                     <div class="central-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="central__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="central__item">
+                     <h2 class="central-name">GRYSHA</h2>
+                     <div class="central-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="central__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+
+               </div>
+               <!--  -->
+               <div class="container__content-logistician">
+
+                  <div class="logistician__content">
+                     <h2 class="logistician__content-title"><i class="_icon-logistician"></i>Логист</h2>
+                  </div>
+
+                  <div class="logistician__item">
+                     <h2 class="logistician-name">GRYSHA</h2>
+                     <div class="logistician-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="logistician__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+
+                  <div class="logistician__item">
+                     <h2 class="logistician-name">GRYSHA</h2>
+                     <div class="logistician-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Работае</option>
+														<option>Выходной</option>	
+														</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="logistician__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+
+               </div>
+               <!--  -->
+               <div class="container__content-courier">
+
+                  <div class="courier__content">
+                     <h2 class="courier__content-title"><i class="_icon-courier"></i>Курьеры</h2>
+                  </div>
+
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														 <option>Статус</option>
+														 <option>Дежурный</option>
+														 <option>Выходной</option>	
+														 <option>12:00</option>	
+														 <option>14:00</option>	
+														 <option>16:00</option>	
+														 <option>18:00</option>	
+													 </select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Статус</option>
+														<option>Дежурный</option>
+														<option>Выходной</option>	
+														<option>12:00</option>	
+														<option>14:00</option>	
+														<option>16:00</option>	
+														<option>18:00</option>	
+													</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+													<option>Статус</option>
+													<option>Дежурный</option>
+													<option>Выходной</option>	
+													<option>12:00</option>	
+													<option>14:00</option>	
+													<option>16:00</option>	
+													<option>18:00</option>	
+												</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+												<option>Статус</option>
+												<option>Дежурный</option>
+												<option>Выходной</option>	
+												<option>12:00</option>	
+												<option>14:00</option>	
+												<option>16:00</option>	
+												<option>18:00</option>	
+											</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+											<option>Статус</option>
+											<option>Дежурный</option>
+											<option>Выходной</option>	
+											<option>12:00</option>	
+											<option>14:00</option>	
+											<option>16:00</option>	
+											<option>18:00</option>	
+										</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+										<option>Статус</option>
+										<option>Дежурный</option>
+										<option>Выходной</option>	
+										<option>12:00</option>	
+										<option>14:00</option>	
+										<option>16:00</option>	
+										<option>18:00</option>	
+									</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+									<option>Статус</option>
+									<option>Дежурный</option>
+									<option>Выходной</option>	
+									<option>12:00</option>	
+									<option>14:00</option>	
+									<option>16:00</option>	
+									<option>18:00</option>	
+								</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+								<option>Статус</option>
+								<option>Дежурный</option>
+								<option>Выходной</option>	
+								<option>12:00</option>	
+								<option>14:00</option>	
+								<option>16:00</option>	
+								<option>18:00</option>	
+							</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+							<option>Статус</option>
+							<option>Дежурный</option>
+							<option>Выходной</option>	
+							<option>12:00</option>	
+							<option>14:00</option>	
+							<option>16:00</option>	
+							<option>18:00</option>	
+						</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+                  <div class="courier__item">
+                     <h2 class="courier-name">145</h2>
+                     <div class="courier-menu">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+						<option>Статус</option>
+						<option>Дежурный</option>
+						<option>Выходной</option>	
+						<option>12:00</option>	
+						<option>14:00</option>	
+						<option>16:00</option>	
+						<option>18:00</option>	
+					</select>
+                           </p>
+                        </form>
+                     </div>
+
+                     <div class="courier__add">
+                        <a href="#popup"><i class="_icon-add"></i></a>
+                     </div>
+
+                  </div>
+
+               </div>
+               <!--  -->
+
+            </div>
+            <!--  -->
+            <div class="container__content-courier"></div>
+         </div>
+         <!--  -->
+      </main>
+      <div class="up">
+         <a href="#" class="up-btn"><i class="_icon-up"></i></a>
+      </div>
+      <div id="popup" class="popup">
+   <div class="popup__body">
+      <div class="popup__content">
+         <a href="#" class="popup__close">×</a>
+         <form action="" class="add__orders">
+            <div class="add__input">
+               <input class="custom-radio" name="color" type="radio" id="color-red" value="green">
+               <label for="color-red"><p class="color-red"><i class="_icon-fine"></i>Штраф</p></label>
+               <input class="custom-radio" name="color" type="radio" id="color-green" value="green">
+               <label for="color-green"><p class="color-green"><i class="_icon-star"></i>Премия</p></label>
+            </div>
+            <div class="add__comment">
+               <p class="comment__title">Комментарий</p>
+               <textarea class="input__textarea" rows="10" cols="45" name="text"></textarea>
+            </div>
+            <div class="add__money">
+               <p class="money__title">Сумма</p>
+               <input class="input__enter" type="text" placeholder="1000">
+            </div>
+
+            <div class="add__btn">
+               <button class="btn"><i class="_icon-delivered"></i> Добавить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+      
+</div>
+
+
+<script src="js/calendar.js"></script>
+</body>
+
+</html>

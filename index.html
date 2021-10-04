@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="ua">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- <script src="js/changeTheme.js"></script> -->
+
+   <title>Панель</title>
+   <link rel="stylesheet" href="css/panel.css" class="theme-link">
+   <link rel="shortcut icon" href="img/panel.png" type="image/x-icon">
+
+
+   <!-- /* Шрифты. Количество: 5 || Open Sans, Nunito Sans, Lato, Montserrat, Roboto */ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <script src="js/theme.js"></script>
+   <div class="wrapper">
+      <!--  -->
+      <header class="header">
+
+   <div class="header__container">
+
+      <div class="header__container-title">
+         <h2 class="title">Панель</h2>
+      </div>
+
+      <div class="header__container-city">
+         <div class="city">
+            <form action="#">
+               <input type="reset" class="reset" value="Clear it!" />
+               <div class="__select" data-state="">
+                  <div class="__select__title" data-default="Option 0">Все города</div>
+                  <div class="__select__content">
+                     <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect0" class="__select__label">Все города</label>
+
+                     <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect1" class="__select__label">СПБ</label>
+
+                     <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect2" class="__select__label">Сочи</label>
+
+                     <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect3" class="__select__label">Москва</label>
+
+                     <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect4" class="__select__label">Все города</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+   </div>
+
+</header>
+      <!--  -->
+      <main class="main">
+         <!--  -->
+         <section class="sidebar">
+
+   <div class="sidebar__content">
+      <ul class="sidebar__content-list">
+         <li class="sub__list sub__list-active">
+            <span class="_icon-panel"></span>
+            <a href="index.html" class="sub__list-item active-item">Панель</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-orders"></span>
+            <a href="order.html" class="sub__list-item">Заказы</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-delivery"></span>
+            <a href="delivery.html" class="sub__list-item">Доставка</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-warehouses"></span>
+            <a href="warehouse.html" class="sub__list-item">Склады</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-reports"></span>
+            <a href="reports.html" class="sub__list-item">Отчеты</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-calendar"></span>
+            <a href="calendar.html" class="sub__list-item">Календарь</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-settings"></span>
+            <a href="settings.html" class="sub__list-item">Управление</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="sidebar__account">
+      <div class="sidebar__account-body">
+         <picture><source srcset="img/account__logo.webp" type="image/webp"><img src="img/account__logo.png" alt="avatar"></picture>
+         <h2 class="account__name">admin</h2>
+         <a href="#" class="account__leave">Выйти</a>
+      </div>
+
+      <div class="sidebar__account-theme">
+
+         <span class="_icon-white__theme"></span>
+
+         <button class="btn__theme">	 
+					 <label class="switch">
+						 <input type="checkbox">
+						 <span class="slider round"></span>
+						</label>
+					</button>
+
+         <span class="_icon-dark__theme"></span>
+
+      </div>
+
+   </div>
+
+</section>
+         <!--  -->
+         <div class="orders">
+            <div class="orders__title">
+               <h2>Заказы</h2>
+            </div>
+            <div class="orders__content">
+               <div class="number">
+                  <h2 class="title__number">Кол-во</h2>
+                  <div class="element">
+                     <h3>Всего:</h3>
+                     <span class="active">30</span>
+                  </div>
+                  <div class="element">
+                     <h3>Заявки:</h3>
+                     <span>20</span>
+                  </div>
+                  <div class="element">
+                     <h3>Оплачено:</h3>
+                     <span>15</span>
+                  </div>
+                  <div class="element">
+                     <h3>В доставке:</h3>
+                     <span>10</span>
+                  </div>
+                  <div class="element">
+                     <h3>Выполнено:</h3>
+                     <span>5</span>
+                  </div>
+               </div>
+               <div class="urgent">
+                  <h2 class="title__urgent">Срочные:
+                     <span>12</span>
+                  </h2>
+                  <div class="element">
+                     <p><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt=""></picture></p>
+                     <span>1</span>
+                  </div>
+                  <div class="element">
+                     <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture><img src="img/fire.png" alt=""><img src="img/fire.png" alt=""></p>
+                     <span>2</span>
+                  </div>
+                  <div class="element">
+                     <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture><img src="img/fire.png" alt=""></p>
+                     <span>3</span>
+                  </div>
+                  <div class="element">
+                     <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                     <span>4</span>
+                  </div>
+                  <div class="element">
+                     <p><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt=""></picture></p>
+                     <span>3</span>
+                  </div>
+               </div>
+               <div class="source">
+                  <h2>Источник</h2>
+                  <div class="element">
+                     <p><i class="_icon-resource"></i>Ресурс</p>
+                     <span>3</span>
+                  </div>
+                  <div class="element">
+                     <p><i class="_icon-Vector"></i>Телеграм</p>
+                     <span>2</span>
+                  </div>
+                  <div class="element">
+                     <p><i class="_icon-personal"></i>Личные</p>
+                     <span>1</span>
+                  </div>
+                  <div class="element">
+                     <p><i class="_icon-gold"></i>Gold</p>
+                     <span>4</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="sidebar__bottom">
+            <div class="employees">
+               <div class="employees__title">
+                  <h2>Сотрудники</h2>
+               </div>
+               <div class="employees__content">
+                  <div class="number-employees">
+                     <div class="element-employees">
+                        <h3>Курьеров</h3>
+                        <span>14</span>
+                     </div>
+                     <div class="element-employees">
+                        <h3>Операторов</h3>
+                        <span>20</span>
+                     </div>
+                     <div class="element-employees">
+                        <h3 class="active">Центр.склд</h3>
+                        <span class="active">1</span>
+                     </div>
+                     <div class="element-employees">
+                        <h3>Склады</h3>
+                        <span>2</span>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="sales">
+               <div class="sales__title">
+                  <h2>Продажи</h2>
+               </div>
+               <div class="sales__content">
+                  <div class="number-sales">
+                     <div class="element-sales">
+                        <h3>Прибыль</h3>
+                        <span>148 000</span>
+                     </div>
+                     <div class="element-sales">
+                        <h3>Продано</h3>
+                        <span>34</span>
+                     </div>
+                     <div class="element-sales">
+                        <h3>Популярно</h3>
+                        <span>Гвозди</span>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="fon__number">
+            <h3>за месяц</h3>
+            <h2>2621</h2>
+         </div>
+         <!--  -->
+      </main>
+      
+
+      
+   </div>
+   <script src="js/panel.js"></script>
+</body>
+
+</html>

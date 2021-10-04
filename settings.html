@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="ua">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Управление</title>
+   <link rel="stylesheet" href="css/settings.css" id="theme-link-dark" >
+   <link rel="shortcut icon" href="img/management.png" type="image/x-icon">
+
+   <!-- /* Шрифты. Количество: 5 || Open Sans, Nunito Sans, Lato, Montserrat, Roboto */ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+   <script src="js/theme.js"></script>
+
+   <div class="wrapper">
+      <!--  -->
+      <header class="header">
+
+   <div class="header__container">
+
+      <div class="header__container-title">
+         <h2 class="title">Управление</h2>
+      </div>
+
+      <div class="header__container-city">
+         <div class="city">
+            <form>
+               <input type="reset" class="reset" value="Clear it!" />
+               <div class="__select" data-state="">
+                  <div class="__select__title" data-default="Option 0">Все города</div>
+                  <div class="__select__content">
+                     <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect0" class="__select__label">Все города</label>
+
+                     <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect1" class="__select__label">СПБ</label>
+
+                     <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect2" class="__select__label">Сочи</label>
+
+                     <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect3" class="__select__label">Москва</label>
+
+                     <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect4" class="__select__label">Все города</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+   </div>
+
+</header>
+      <!--  -->
+      <main class="main">
+         <!--  -->
+         <section class="sidebar">
+
+   <div class="sidebar__content">
+<ul class="sidebar__content-list">
+         <li class="sub__list">
+            <span class="_icon-panel"></span>
+            <a href="index.html" class="sub__list-item">Панель</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-orders"></span>
+            <a href="order.html" class="sub__list-item">Заказы</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-delivery"></span>
+            <a href="delivery.html" class="sub__list-item">Доставка</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-warehouses"></span>
+            <a href="warehouse.html" class="sub__list-item">Склады</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-reports"></span>
+            <a href="reports.html" class="sub__list-item">Отчеты</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-calendar"></span>
+            <a href="calendar.html" class="sub__list-item">Календарь</a>
+         </li>
+         <li class="sub__list sub__list-active">
+            <span class="_icon-settings"></span>
+            <a href="#" class="sub__list-item active-item">Управление</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="sidebar__account">
+      <div class="sidebar__account-body">
+         <picture><source srcset="img/account__logo.webp" type="image/webp"><img src="img/account__logo.png" alt="avatar"></picture>
+         <h2 class="account__name">admin</h2>
+         <a href="#" class="account__leave">Выйти</a>
+      </div>
+
+      <div class="sidebar__account-theme">
+
+         <span class="_icon-white__theme"></span>
+
+         <label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+
+         <span class="_icon-dark__theme"></span>
+
+      </div>
+
+   </div>
+
+</section>
+         <!--  -->
+         <section class="tabs">
+            <div class="tab">
+               <div class="tab__body">
+                  <!--  -->
+                  <div id="tab-1" class="tab__block">
+
+                     <div class="staff">
+
+                        <div class="staff__button">
+                           <h3 class="staff__title">Сотрудники</h3>
+                           <button class="btn__transfer"><a href="#popup"><i class="_icon-add"></i>Добавить</a></button>
+                        </div>
+
+                        <div class="staff__header">
+                           <div class="staff__header-content">
+                              <!--  -->
+                              <div class="info-name">
+                                 <h3>Имя</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																				<option>Все</option>
+																				<option>12345</option>
+																				<option>123</option>
+																				<option>12345</option>
+																				<option>123</option>
+																				</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-post">
+                                 <h3>Должность</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																					<option>Все</option>
+																					<option>Оператор</option>
+																					<option>Курьер</option>
+																					<option>Работник</option>
+																					<option>Строитель</option>
+																				</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-city">
+                                 <h3>Город</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																					<option>Все</option>
+																					<option>МСК</option>
+																					<option>МО</option>
+																					<option>Сочи</option>
+																					<option>СПБ</option>
+																				</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-deposit">
+                                 <h3>Залог</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																				<option>Все</option>
+																				<option>20000</option>
+																				<option>3000000</option>
+																				<option>нет</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-status">
+                                 <h3>Статус</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																					<option>Все</option>
+																					<option>Да</option>
+																					<option>Нет</option>
+																				</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                        <div class="staff__content">
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+  																	<input type="checkbox">
+  																	<span class="slider round"></span>
+																 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+																	<input type="checkbox">
+																	<span class="slider round"></span>
+															 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+																<input type="checkbox">
+																<span class="slider round"></span>
+														 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+															<input type="checkbox">
+															<span class="slider round"></span>
+													 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+														<input type="checkbox">
+														<span class="slider round"></span>
+												 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+													<input type="checkbox">
+													<span class="slider round"></span>
+											 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+										 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+									 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+								 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+								 <input type="checkbox">
+								 <span class="slider round"></span>
+							</label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+											<input type="checkbox">
+											<span class="slider round"></span>
+									 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="staff__content-element">
+                              <div class="element-name">
+                                 <p>12345</p>
+                              </div>
+                              <div class="element-post">
+                                 <p>Оператор</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-deposit">
+                                 <p>20000</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+										 <input type="checkbox">
+										 <span class="slider round"></span>
+									</label>
+                              </div>
+                           </div>
+                           <!--  -->
+
+                        </div>
+
+                        <div class="staff__sidebar">
+
+
+                           <div class="staff__sidebar-content">
+
+                              <div class="sidebar__title">
+                                 <h3 class="title__logo">Должности</h3>
+                                 <button class="title__btn"><a href="#popup2"><i class="_icon-add"></i>Добавить</a></button>
+                              </div>
+
+                              <div class="staff__name">
+                                 <h4>Название</h4>
+                                 <h4>Статус</h4>
+                              </div>
+                              <!--  -->
+                              <div class="sidebar__element">
+                                 <h3 class="post-name">Курьер</h3>
+                                 <label class="post-switch">
+																	<input type="checkbox">
+																	<span class="slider round"></span>
+															 </label>
+                              </div>
+                              <!--  -->
+                              <div class="sidebar__element">
+                                 <h3 class="post-name">Работник</h3>
+                                 <label class="post-switch">
+																 <input type="checkbox">
+																 <span class="slider round"></span>
+															</label>
+                              </div>
+                              <!--  -->
+                              <div class="sidebar__element">
+                                 <h3 class="post-name">Строитель</h3>
+                                 <label class="post-switch">
+															 <input type="checkbox">
+															 <span class="slider round"></span>
+														</label>
+                              </div>
+                              <!--  -->
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+                  <!--  -->
+                  <div id="tab-2" class="tab__block">
+
+                     <div class="orders">
+
+                        <div class="orders__button">
+                           <h3 class="orders__title">Настройки срочности</h3>
+                           <button class="btn__transfer"><a href="#popup3"><i class="_icon-add"></i>Добавить</a></button>
+                        </div>
+
+                        <div class="orders__header">
+                           <div class="orders__header-content">
+                              <!--  -->
+                              <div class="info-type">
+                                 <h3>Тип</h3>
+                              </div>
+                              <!--  -->
+                              <div class="info-cost">
+                                 <h3>Стоимость</h3>
+                              </div>
+                              <!--  -->
+                              <div class="info-payment">
+                                 <h3>Оплата</h3>
+                              </div>
+                              <!--  -->
+                              <div class="info-timecity">
+                                 <h3>Часы <br>город</h3>
+                              </div>
+                              <!--  -->
+                              <div class="info-timearea">
+                                 <h3>Часы <br>область</h3>
+                              </div>
+                              <!--  -->
+                              <div class="info-status">
+                                 <h3>Статус</h3>
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                        <div class="orders__content">
+                           <!--  -->
+                           <div class="orders__content-element">
+                              <div class="element-type">
+                                 <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture><img src="img/fire.png" alt=""><img src="img/fire.png" alt=""></p>
+                              </div>
+                              <div class="element-cost">
+                                 <p>1000</p>
+                              </div>
+                              <div class="element-payment">
+                                 <p>500</p>
+                              </div>
+                              <div class="element-timecity">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-timearea">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+																	<input type="checkbox">
+																	<span class="slider round"></span>
+															 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="orders__content-element">
+                              <div class="element-type">
+                                 <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                              </div>
+                              <div class="element-cost">
+                                 <p>1000</p>
+                              </div>
+                              <div class="element-payment">
+                                 <p>500</p>
+                              </div>
+                              <div class="element-timecity">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-timearea">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+																<input type="checkbox">
+																<span class="slider round"></span>
+														 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="orders__content-element">
+                              <div class="element-type">
+                                 <p><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture><img src="img/fire.png" alt=""></p>
+                              </div>
+                              <div class="element-cost">
+                                 <p>1000</p>
+                              </div>
+                              <div class="element-payment">
+                                 <p>500</p>
+                              </div>
+                              <div class="element-timecity">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-timearea">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+															<input type="checkbox">
+															<span class="slider round"></span>
+													 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="orders__content-element">
+                              <div class="element-type">
+                                 <p><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt=""></picture></p>
+                              </div>
+                              <div class="element-cost">
+                                 <p>1000</p>
+                              </div>
+                              <div class="element-payment">
+                                 <p>500</p>
+                              </div>
+                              <div class="element-timecity">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-timearea">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+														<input type="checkbox">
+														<span class="slider round"></span>
+												 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="orders__content-element">
+                              <div class="element-type">
+                                 <p><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt=""></picture></p>
+                              </div>
+                              <div class="element-cost">
+                                 <p>1000</p>
+                              </div>
+                              <div class="element-payment">
+                                 <p>500</p>
+                              </div>
+                              <div class="element-timecity">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-timearea">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+													<input type="checkbox">
+													<span class="slider round"></span>
+											 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="orders__content-element">
+                              <div class="element-type">
+                                 <p>Нет</p>
+                              </div>
+                              <div class="element-cost">
+                                 <p>1000</p>
+                              </div>
+                              <div class="element-payment">
+                                 <p>500</p>
+                              </div>
+                              <div class="element-timecity">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-timearea">
+                                 <p>12</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+										 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                        </div>
+
+                        <div class="orders__sidebar">
+
+                           <div class="orders__sidebar-content">
+
+                              <div class="sidebar__title">
+                                 <h3 class="title__logo">Зоны доставки</h3>
+                                 <button class="title__btn"><a href="#popup4"><i class="_icon-add"></i>Добавить</a></button>
+                              </div>
+
+                              <div class="staff__name">
+                                 <h4>Название</h4>
+                                 <h4>Км</h4>
+                                 <h4>Статус</h4>
+                              </div>
+                              <!--  -->
+                              <div class="sidebar__element">
+                                 <h3 class="post-name">МСК</h3>
+                                 <h3 class="post-check">нет</h3>
+                                 <label class="post-switch">
+																<input type="checkbox">
+																<span class="slider round"></span>
+														 </label>
+                              </div>
+                              <!--  -->
+                              <div class="sidebar__element">
+                                 <h3 class="post-name">МО</h3>
+                                 <h3 class="post-check">нет</h3>
+                                 <label class="post-switch">
+															 <input type="checkbox">
+															 <span class="slider round"></span>
+														</label>
+                              </div>
+                              <!--  -->
+                              <div class="sidebar__element">
+                                 <h3 class="post-name">ЦКАД</h3>
+                                 <h3 class="post-check">200</h3>
+                                 <label class="post-switch">
+														 <input type="checkbox">
+														 <span class="slider round"></span>
+													</label>
+                              </div>
+                              <!--  -->
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+                  <!--  -->
+                  <div id="tab-3" class="tab__block">
+
+                     <div class="warehouse">
+
+                        <div class="warehouse__button">
+                           <button class="btn__transfer"><a href="#popup5"><i class="_icon-add"></i>Добавить</a></button>
+                        </div>
+
+                        <div class="warehouse__header">
+                           <div class="warehouse__header-content">
+                              <!--  -->
+                              <div class="info-name">
+                                 <h3>Название</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																			<option>Все</option>
+																			<option>Склад1</option>
+																			<option>Склад2</option>
+																			<option>Склад3</option>
+																			<option>Склад4</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-city">
+                                 <h3>Город</h3>
+                                 <form action="#">
+                                    <p>
+                                       <!-- <label class="label">Все</label> -->
+                                       <select class="turnintodropdown">
+																			<option>Все</option>
+																			<option>МСК</option>
+																			<option>МО</option>
+																			<option>СПБ</option>
+																			<option>Сочи</option>
+																			</select>
+                                    </p>
+                                 </form>
+                              </div>
+                              <!--  -->
+                              <div class="info-stasus">
+                                 <h3>Статус</h3>
+
+                              </div>
+                              <!--  -->
+                           </div>
+                        </div>
+
+                        <div class="warehouse__content">
+                           <!--  -->
+                           <div class="warehouse__content-element">
+                              <div class="element-name">
+                                 <p>Склад1</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+																<input type="checkbox">
+																<span class="slider round"></span>
+														 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="warehouse__content-element">
+                              <div class="element-name">
+                                 <p>Склад1</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+															<input type="checkbox">
+															<span class="slider round"></span>
+													 </label>
+                              </div>
+                           </div>
+                           <!--  -->
+                           <div class="warehouse__content-element">
+                              <div class="element-name">
+                                 <p>Склад1</p>
+                              </div>
+                              <div class="element-city">
+                                 <p>МСК</p>
+                              </div>
+                              <div class="element-status">
+                                 <label class="switch">
+													 <input type="checkbox">
+													 <span class="slider round"></span>
+												</label>
+                              </div>
+                           </div>
+                           <!--  -->
+                        </div>
+
+                     </div>
+
+                  </div>
+                  <!--  -->
+                  <div id="tab-4" class="tab__block">
+
+                     <div class="settings">
+
+                        <div class="settings-city">
+
+                           <div class="settings__logo">
+                              <h3 class="settings__title">Города</h3>
+                           </div>
+
+                           <div class="settings__header">
+                              <div class="settings__header-content">
+                                 <!--  -->
+                                 <div class="info-name">
+                                    <h3>Название</h3>
+                                 </div>
+                                 <!--  -->
+                                 <div class="info-stasus">
+                                    <h3>Статус</h3>
+                                 </div>
+                                 <!--  -->
+                              </div>
+                           </div>
+
+                           <div class="settings__content">
+                              <!--  -->
+                              <div class="settings__content-element">
+                                 <div class="element-name">
+                                    <p>Москва</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+															 <input type="checkbox">
+															 <span class="slider round"></span>
+														</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="settings__content-element">
+                                 <div class="element-name">
+                                    <p>СПБ</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+														 <input type="checkbox">
+														 <span class="slider round"></span>
+													</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="settings__content-element">
+                                 <div class="element-name">
+                                    <p>Ростов</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+													 <input type="checkbox">
+													 <span class="slider round"></span>
+												</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+
+                           </div>
+
+                           <div class="settings__btn">
+                              <button class="btn__transfer"><a href="#popup6"><i class="_icon-add"></i>Добавить</a></button>
+                           </div>
+
+                        </div>
+
+                        <div class="settings-category">
+
+                           <div class="category__logo">
+                              <h3 class="category__title">Категории товаров</h3>
+                           </div>
+
+                           <div class="category__header">
+                              <div class="category__header-content">
+                                 <!--  -->
+                                 <div class="info-name">
+                                    <h3>Название</h3>
+                                 </div>
+                                 <!--  -->
+                                 <div class="info-stasus">
+                                    <h3>Статус</h3>
+                                 </div>
+                                 <!--  -->
+                              </div>
+                           </div>
+
+                           <div class="category__content">
+                              <!--  -->
+                              <div class="category__content-element">
+                                 <div class="element-name">
+                                    <p>Стройматериалы</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+															<input type="checkbox">
+															<span class="slider round"></span>
+													 </label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="category__content-element">
+                                 <div class="element-name">
+                                    <p>Дерево</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+														 <input type="checkbox">
+														 <span class="slider round"></span>
+													</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="category__content-element">
+                                 <div class="element-name">
+                                    <p>Инструменты</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+													 <input type="checkbox">
+													 <span class="slider round"></span>
+												</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="category__content-element">
+                                 <div class="element-name">
+                                    <p>Оборудование</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+												 <input type="checkbox">
+												 <span class="slider round"></span>
+											</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="category__content-element">
+                                 <div class="element-name">
+                                    <p>Инструменты</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+													<input type="checkbox">
+													<span class="slider round"></span>
+											 </label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="category__content-element">
+                                 <div class="element-name">
+                                    <p>Инструменты</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+										 </label>
+                                 </div>
+                              </div>
+                              <!--  -->
+
+                           </div>
+
+                           <div class="category__btn">
+                              <button class="btn__transfer"><a href="#popup7"><i class="_icon-add"></i>Добавить</a></button>
+                           </div>
+
+                        </div>
+
+                        <div class="settings-sources">
+
+                           <div class="sources__logo">
+                              <h3 class="sources__title">Источники</h3>
+                           </div>
+
+                           <div class="sources__header">
+                              <div class="sources__header-content">
+                                 <!--  -->
+                                 <div class="info-icon">
+                                    <h3>Иконка</h3>
+                                 </div>
+                                 <!--  -->
+                                 <div class="info-name">
+                                    <h3>Название</h3>
+                                 </div>
+                                 <!--  -->
+                                 <div class="info-stasus">
+                                    <h3>Статус</h3>
+                                 </div>
+                                 <!--  -->
+                              </div>
+                           </div>
+
+                           <div class="sources__content">
+                              <!--  -->
+                              <div class="sources__content-element">
+                                 <div class="element-icon">
+                                    <p><i class="_icon-resource"></i></p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Ресурс</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+														 <input type="checkbox">
+														 <span class="slider round"></span>
+													</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="sources__content-element">
+                                 <div class="element-icon">
+                                    <p><i class="_icon-Vector"></i></p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Telegram</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+														<input type="checkbox">
+														<span class="slider round"></span>
+												 </label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                              <div class="sources__content-element">
+                                 <div class="element-icon">
+                                    <p><i class="_icon-gold"></i></p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Gold</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+													<input type="checkbox">
+													<span class="slider round"></span>
+											 </label>
+                                 </div>
+                              </div>
+                              <!--  -->
+
+                              <div class="sources__content-element">
+                                 <div class="element-icon">
+                                    <p><i class="_icon-personal"></i></p>
+                                 </div>
+                                 <div class="element-name">
+                                    <p>Личный</p>
+                                 </div>
+                                 <div class="element-status">
+                                    <label class="switch">
+												 <input type="checkbox">
+												 <span class="slider round"></span>
+											</label>
+                                 </div>
+                              </div>
+                              <!--  -->
+
+                           </div>
+
+                           <div class="sources__btn">
+                              <button class="btn__transfer"><a href="#popup8"><i class="_icon-add"></i>Добавить</a></button>
+                           </div>
+
+                        </div>
+
+                        <div class="settings-shop">
+
+                           <div class="shop__logo">
+                              <h3 class="shop__title">Магазин</h3>
+                           </div>
+
+                           <div class="shop__header">
+                              <div class="shop__header-content">
+                                 <div class="info-stasus">
+                                    <h3>Статус</h3>
+                                 </div>
+                                 <!--  -->
+                              </div>
+                           </div>
+
+                           <div class="shop__content">
+                              <!--  -->
+                              <div class="shop__content-element">
+                                 <div class="element-status">
+                                    <label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+										 </label>
+                                 </div>
+                              </div>
+                              <!--  -->
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+                  <!--  -->
+               </div>
+               <div class="tab__item">
+                  <a href="#tab-1" class="tabs__items">Сотрудники</a>
+                  <a href="#tab-2" class="tabs__items">Заказы</a>
+                  <a href="#tab-3" class="tabs__items">Склады</a>
+                  <a href="#tab-4" class="tabs__items">Настройки</a>
+               </div>
+            </div>
+         </section>
+         <!--  -->
+      </main>
+      <!--  -->
+      <div class="up">
+         <a href="#" class="up-btn"><i class="_icon-up"></i></a>
+      </div>
+      <!--  -->
+      <!--  -->
+<!-- popup #1 -->
+<div id="popup" class="popup">
+   <div class="popup__body">
+      <div class="popup__content">
+         <a href="#" class="popup__close">&times;</a>
+         <form action="#">
+            <p class="input-type">
+               <label for="">Ник</label>
+               <input type="name">
+            </p>
+            <p>
+               <label class="label">Должность</label>
+               <select class="turnintodropdown">
+								<option>Выбрать</option>
+								<option>Оператор</option>
+								<option>Курьер</option>
+								<option>Склад</option>
+								<option>Строитель</option>
+								<option>Работник</option>
+							</select>
+            </p>
+            <p class="courier">
+               <input type="checkbox" class="custom-checkbox" id="item" name="courier" value="yes">
+               <label for="item">Работает курьером</label>
+            </p>
+            <p>
+               <label class="label">Город</label>
+               <select class="turnintodropdown">
+							 <option>Выбрать</option>
+							 <option>МСК</option>
+							 <option>МО</option>
+							 <option>Сочи</option>
+							 <option>СПБ</option>
+							</select>
+            </p>
+            <p class="input-type">
+               <label for="">Залог</label>
+               <input type="text" placeholder="Выбрать">
+            </p>
+            <p>
+               <label class="label">Доступ</label>
+               <select class="turnintodropdown">
+								 <option>Выбрать</option>
+								 <option>Выбрано: 1</option>
+								 <option>Выбрано: 2</option>
+								 <option>Выбрано: 3</option>
+								 <option>Выбрано: 4</option>
+								 <option>Выбрано: 5</option>
+						 </select>
+            </p>
+            <p>
+               <label class="label">География</label>
+               <select class="turnintodropdown">
+								 <option>Выбрать</option>
+								 <option>Выбрано: 1</option>
+								 <option>Выбрано: 2</option>
+								 <option>Выбрано: 3</option>
+								 <option>Выбрано: 4</option>
+								 <option>Выбрано: 5</option>
+							</select>
+            </p>
+            <button class="field-btn"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- popup #1 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #2 -->
+<div id="popup2" class="popup">
+   <div class="popup__body2">
+      <div class="popup__content2">
+         <a href="#" class="popup__close2">&times;</a>
+
+         <form action="#">
+            <h3>Должность</h3>
+            <input type="text">
+            <button class="popup2__btn"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #2 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #3 -->
+<div id="popup3" class="popup">
+   <div class="popup__body3">
+      <div class="popup__content3">
+         <a href="#" class="popup__close3">&times;</a>
+
+         <form action="#">
+            <p>
+
+               <div class="example-2">
+                  <div class="form-group">
+                     <h4>Загрузить иконку .svg</h4>
+                     <input type="file" name="file" id="file" class="input-file">
+                     <label for="file" class="btn btn-tertiary js-labelFile">
+      										<span class="js-fileName">Обзор</span>
+    										</label>
+                  </div>
+               </div>
+            </p>
+            <p>
+               <h4>Стоимость</h4>
+               <input type="number" step="100" min="100">
+            </p>
+            <p>
+               <h4>Оплата</h4>
+               <input type="text" placeholder="Выбрать">
+            </p>
+            <p>
+               <h4>Кол-во часов город</h4>
+               <input type="text">
+            </p>
+            <p>
+               <h4>Кол-во часов область</h4>
+               <input type="text" placeholder="Выбрать">
+            </p>
+            <button class="add__element"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+      </div>
+   </div>
+</div>
+<!-- popup #3 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #4 -->
+<div id="popup4" class="popup">
+   <div class="popup__body4">
+      <div class="popup__content4">
+         <a href="#" class="popup__close4">&times;</a>
+
+         <form action="#">
+            <P>
+               <h4>Название</h4>
+               <input type="text">
+            </P>
+            <p>
+               <label class="label">Город</label>
+               <select class="turnintodropdown">
+				 				<option>Выбрать</option>
+				 				<option>МСК</option>
+				 				<option>МО</option>
+				 				<option>Сочи</option>
+				 				<option>СПБ</option>
+						 	 </select>
+            </p>
+            <p>
+               <input type="checkbox" class="custom-checkbox" id="mileage" name="happy" value="yes">
+               <label for="mileage">Добавить километраж</label>
+            </p>
+            <P>
+               <h4>Километраж</h4>
+               <input type="text">
+            </P>
+            <button class="add__delivery"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #4 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #5 -->
+<div id="popup5" class="popup">
+   <div class="popup__body5">
+      <div class="popup__content5">
+         <a href="#" class="popup__close5">&times;</a>
+
+         <form action="#">
+            <P>
+               <h4>Название</h4>
+               <input type="text">
+            </P>
+            <p>
+               <label class="label">Город</label>
+               <select class="turnintodropdown">
+								<option>Выбрать город</option>
+								<option>МСК</option>
+								<option>МО</option>
+								<option>Сочи</option>
+								<option>СПБ</option>
+							 </select>
+            </p>
+            <p class="radio">
+               <input class="custom-radio" name="element-radio10" type="radio" id="warehouse1" value="yes">
+               <label for="warehouse1">Центральный</label>
+               <input class="custom-radio" name="element-radio10" type="radio" id="warehouse2" value="yes">
+               <label for="warehouse2">Мини</label>
+               <input class="custom-radio" name="element-radio10" type="radio" id="warehouse3" value="green">
+               <label for="warehouse3">Склад</label>
+            </p>
+            <p class="employees">
+               <button class="employee">GRYSHA<span class="delete">&times;</span></button>
+               <button class="employee">YABLOKO<span class="delete">&times;</span></button>
+               <button class="employee">CHELIK<span class="delete">&times;</span></button>
+               <button class="employee">GRYSHA<span class="delete">&times;</span></button>
+            </p>
+            <p>
+               <label class="label">Сотрудники</label>
+               <select class="turnintodropdown">
+								 <option>Добавить</option>
+								 <option>GRYSHA</option>
+								 <option>CHELIK</option>
+								 <option>YABLOKO</option>
+							 </select>
+            </p>
+            <button class="add__delivery"><i class="_icon-delivered"></i>Добавить</button>
+            <button class="delete__btn"><a href="#popup9">Удалить</a></button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #5 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #6 -->
+<div id="popup6" class="popup">
+   <div class="popup__body6">
+      <div class="popup__content6">
+         <a href="#" class="popup__close6">&times;</a>
+
+         <form action="#">
+            <P>
+               <h4>Название</h4>
+               <input type="text">
+            </P>
+            <button class="add__delivery"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #6 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #7 -->
+<div id="popup7" class="popup">
+   <div class="popup__body7">
+      <div class="popup__content7">
+         <a href="#" class="popup__close7">&times;</a>
+
+         <form action="#">
+            <P>
+               <h4>Название</h4>
+               <input type="text">
+            </P>
+            <button class="add__delivery"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #7 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #8 -->
+<div id="popup8" class="popup">
+   <div class="popup__body8">
+      <div class="popup__content8">
+         <a href="#" class="popup__close8">&times;</a>
+
+         <form action="#">
+            <div class="example-2">
+               <div class="form-group">
+                  <h4>Загрузить иконку .svg</h4>
+                  <input type="file" name="file" id="file" class="input-file">
+                  <label for="file" class="btn btn-tertiary js-labelFile">
+										<span class="js-fileName">Обзор</span>
+									</label>
+               </div>
+            </div>
+            <P>
+               <h4>Название</h4>
+               <input type="text">
+            </P>
+            <button class="add__delivery"><i class="_icon-delivered"></i>Добавить</button>
+         </form>
+
+      </div>
+   </div>
+</div>
+<!-- popup #8 -->
+<!--  -->
+
+<!--  -->
+<!-- popup #9 -->
+<div id="popup9" class="popup">
+   <div class="popup__body9">
+      <div class="popup__content9">
+         <a href="#" class="popup__close9">&times;</a>
+         <div class="delete__img">
+            <picture><source srcset="img/delete.webp" type="image/webp"><img src="img/delete.png" alt="delete"></picture>
+         </div>
+         <div class="delete__title">
+            <h2 class="title">Вы хотите удалить:</h2>
+            <h2 class="sub__title">Склад
+               <span class="date" id="number">4</span></h2>
+         </div>
+         <div class="delete__btn">
+            <button class="btn__cancellation">Отмена</button>
+            <button class="btn__delet">Удалить</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- popup #9 -->
+<!--  -->
+      <!--  -->
+      
+   </div>
+
+<script src="js/settings.js"></script>
+</body>
+
+</html>

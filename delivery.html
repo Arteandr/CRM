@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head lang="ua">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Доставка</title>
+   <link rel="stylesheet" href="css/delivery.css" id="theme-link">
+   <link rel="shortcut icon" href="img/delivery.png" type="image/x-icon">
+
+   <!-- /* Шрифты. Количество: 5 || Open Sans, Nunito Sans, Lato, Montserrat, Roboto */ -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300&family=Nunito+Sans:wght@700&family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+
+   <div class="header__container">
+
+      <div class="header__body">
+
+         <div class="header__body-button">
+            <form>
+               <input type="reset" class="reset" value="Clear it!" />
+               <div class="__select" data-state="">
+                  <div class="__select__title" data-default="Option 0">Все города</div>
+                  <div class="__select__content">
+                     <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect0" class="__select__label">Все города</label>
+
+                     <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect1" class="__select__label">СПБ</label>
+
+                     <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect2" class="__select__label">Сочи</label>
+
+                     <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect3" class="__select__label">Москва</label>
+
+                     <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect">
+                     <label for="singleSelect4" class="__select__label">Все города</label>
+                  </div>
+               </div>
+            </form>
+
+         </div>
+
+         <div class="header__body-search">
+            <h2 class="menu__list-title">Номер заказа</h2>
+         </div>
+
+         <nav class="menu__body">
+            <ul class="menu__list">
+
+               <li class="menu__list-source">
+                  <div>
+                     <h2 class="menu__list-title">Источник</h2>
+                     <a href="#" class="menu__link">Все<span class="_icon-additionally"></span></a>
+                  </div>
+                  <ul class="menu__sub-list">
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="source1.0" name="source" value="yes">
+                        <label for="source1.0"><li><a href="#" class="menu__sub-link">Все</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="source1.1" name="source" value="yes">
+                        <label for="source1.1"><li><span class="_icon-resource"></span><a href="#" class="menu__sub-link">Ресурс</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="source1.2" name="source" value="yes">
+                        <label for="source1.2"><li><span class="_icon-Vector"></span><a href="#" class="menu__sub-link">Telegram</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="source1.3" name="source" value="yes">
+                        <label for="source1.3"><li><span class="_icon-gold"></span><a href="#" class="menu__sub-link">Gold</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="source1.4" name="source" value="yes">
+                        <label for="source1.4"><li><span class="_icon-personal"></span><a href="#" class="menu__sub-link">Личный</a></li></label>
+                     </div>
+                     <li><button class="menu__sub-button">Применить</button></li>
+                  </ul>
+               </li>
+
+               <li class="menu__list-date">
+                  <div>
+                     <h2 class="menu__list-title">Дата</h2>
+                     <a href="#" class="menu__link">Все<span class="_icon-additionally"></span></a>
+                  </div>
+                  <ul class="menu__sub-list">
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="date1.0" name="source" value="yes">
+                        <label for="date1.0"><li><a href="#" class="menu__sub-link">Сегодня</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="date1.1" name="source" value="yes">
+                        <label for="date1.1"><li><a href="#" class="menu__sub-link">Вчера</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="date1.2" name="source" value="yes">
+                        <label for="date1.2"><li><a href="#" class="menu__sub-link">2 дня</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="date1.3" name="source" value="yes">
+                        <label for="date1.3"><li><a href="#" class="menu__sub-link">3 дня</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="date1.4" name="source" value="yes">
+                        <label for="date1.4"><li><a href="#" class="menu__sub-link">Неделя</a></li></label>
+                     </div>
+                     <li><button class="menu__sub-button">Применить</button></li>
+                  </ul>
+               </li>
+
+               <li class="menu__list-urgency">
+                  <div>
+                     <h2 class="menu__list-title">Срочность</h2>
+                     <a href="#" class="menu__link">Все<span class="_icon-additionally"></span></a>
+                  </div>
+                  <ul class="menu__sub-list">
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.1" name="urgency" value="yes">
+                        <label for="urgency1.1"><li><a href="#" class="menu__sub-link">Все</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.2" name="urgency" value="yes">
+                        <label for="urgency1.2"><li><a href="#" class="menu__sub-link"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.3" name="urgency" value="yes">
+                        <label for="urgency1.3"><li><a href="#" class="menu__sub-link"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture><img src="img/fire.png" alt="fire"></a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.4" name="urgency" value="yes">
+                        <label for="urgency1.4"><li><a href="#" class="menu__sub-link"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture><img src="img/fire.png" alt="fire"><img src="img/fire.png" alt="fire"></a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.5" name="urgency" value="yes">
+                        <label for="urgency1.5"><li><a href="#" class="menu__sub-link"><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt="sneakers"></picture></a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.6" name="urgency" value="yes">
+                        <label for="urgency1.6"><li><a href="#" class="menu__sub-link"><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt="rocket"></picture></a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="urgency1.7" name="urgency" value="yes">
+                        <label for="urgency1.7"><li><a href="#" class="menu__sub-link">нет</a></li></label>
+                     </div>
+                     <li><button class="menu__sub-button">Применить</button></li>
+                  </ul>
+               </li>
+
+               <li class="menu__list-destination">
+                  <div>
+                     <h2 class="menu__list-title">Куда</h2>
+                     <a href="#" class="menu__link">Все<span class="_icon-additionally"></span></a>
+                  </div>
+                  <ul class="menu__sub-list">
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="destination1.0" name="urgency" value="yes">
+                        <label for="destination1.0"><li><a href="#" class="menu__sub-link">МСК</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="destination1.2" name="urgency" value="yes">
+                        <label for="destination1.2"><li><a href="#" class="menu__sub-link">СПБ</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="destination1.3" name="urgency" value="yes">
+                        <label for="destination1.3"><li><a href="#" class="menu__sub-link">МО</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="destination1.4" name="urgency" value="yes">
+                        <label for="destination1.4"><li><a href="#" class="menu__sub-link">ЦКАД</a></li></label>
+                     </div>
+                     <li><button class="menu__sub-button">Применить</button></li>
+                  </ul>
+               </li>
+
+               <li class="menu__list-status">
+                  <div>
+                     <h2 class="menu__list-title">Статус</h2>
+                     <a href="#" class="menu__link">Все<span class="_icon-additionally"></span></a>
+                  </div>
+                  <ul class="menu__sub-list">
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="status1.0" name="status" value="yes">
+                        <label for="status1.0"><li><a href="#" class="menu__sub-link-status -paid"><span class="_icon-paid"></span>Оплачен</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="status1.1" name="status" value="yes">
+                        <label for="status1.1"><li><a href="#" class="menu__sub-link-status -inDelivery"><span class="_icon-inDelivery"></span>В доставке</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="status1.2" name="status" value="yes">
+                        <label for="status1.2"><li><a href="#" class="menu__sub-link-status -expectation"><span class="_icon-expectation"></span>В ожидании</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="status1.3" name="status" value="yes">
+                        <label for="status1.3"><li><a href="#" class="menu__sub-link-status -remortgaging"><span class="_icon-remortgaging"></span>Перезаклад</a></li></label>
+                     </div>
+                     <div class="menu__sub-list-item">
+                        <input type="checkbox" class="custom-checkbox" id="status1.4" name="status" value="yes">
+                        <label for="status1.4"><li><a href="#" class="menu__sub-link-status -delivered"><span class="_icon-delivered"></span>Доставлен</a></li></label>
+                     </div>
+                     <li><button class="menu__sub-button">Применить</button></li>
+                  </ul>
+               </li>
+
+               <li class="menu__list-courier">
+                  <div>
+                     <h2 class="menu__list-title">Курьер</h2>
+                     <form action="#">
+                        <p>
+                           <!-- <label class="label">Все</label> -->
+                           <select class="turnintodropdown">
+														<option>Все</option>
+														<option>ABD</option>
+														<option>ASC</option>
+														<option>QWE</option>
+														<option>QWR</option>
+														<option>RTY</option>	
+														<option>ABD</option>
+														<option>ASC</option>
+														<option>QWE</option>
+														<option>QWR</option>
+														<option>RTY</option>
+												</select>
+                        </p>
+                     </form>
+                  </div>
+               </li>
+
+               <li class="menu__list-warehouse">
+                  <div>
+                     <h2 class="menu__list-title">Скдад</h2>
+                     <form action="#">
+                        <p>
+                           <!-- <label class="label">Все</label> -->
+                           <select class="turnintodropdown">
+													<option>Все</option>
+													<option>Склад 1</option>
+													<option>Склад 2</option>
+													<option>Склад 3</option>
+													<option>Склад 4</option>
+											</select>
+                        </p>
+                     </form>
+                  </div>
+               </li>
+
+               <li class="menu__list-copy"><picture><source srcset="img/copy.webp" type="image/webp"><img src="img/copy.png" alt="copy"></picture></li>
+
+            </ul>
+         </nav>
+
+
+      </div>
+
+   </div>
+
+</header>
+      <main class="main">
+         <section class="sidebar">
+
+   <div class="sidebar__content">
+         <ul class="sidebar__content-list">
+         <li class="sub__list">
+            <span class="_icon-panel"></span>
+            <a href="index.html" class="sub__list-item">Панель</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-orders"></span>
+            <a href="order.html" class="sub__list-item">Заказы</a>
+         </li>
+         <li class="sub__list sub__list-active">
+            <span class="_icon-delivery"></span>
+            <a href="delivery.html" class="sub__list-item active-item">Доставка</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-warehouses"></span>
+            <a href="warehouse.html" class="sub__list-item">Склады</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-reports"></span>
+            <a href="reports.html" class="sub__list-item">Отчеты</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-calendar"></span>
+            <a href="calendar.html" class="sub__list-item">Календарь</a>
+         </li>
+         <li class="sub__list">
+            <span class="_icon-settings"></span>
+            <a href="settings.html" class="sub__list-item">Управление</a>
+         </li>
+      </ul>
+   </div>
+
+   <div class="sidebar__account">
+      <div class="sidebar__account-body">
+         <picture><source srcset="img/account__logo.webp" type="image/webp"><img src="img/account__logo.png" alt="avatar"></picture>
+         <h2 class="account__name">admin</h2>
+         <a href="#" class="account__leave">Выйти</a>
+      </div>
+
+      <div class="sidebar__account-theme">
+
+         <span class="_icon-white__theme"></span>
+
+         <label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+
+         <span class="_icon-dark__theme"></span>
+
+      </div>
+
+   </div>
+
+</section>
+
+         <section class="orders">
+            <!--  -->
+            <div class="orders__content">
+
+               <div class="orders__wrapper-element">
+                  <div class="element__time">
+                     <p>Сегодня</p>
+                  </div>
+               </div>
+
+               <div class="element__body">
+                  <div class="element__body-number">
+                     <p class="number__title">GG12SDASD32134</p>
+                  </div>
+
+                  <div class="element__body-source">
+                     <div class="source">
+                        <li class="source-menu">
+                           <span class="_icon-gold"></span>
+                           <a>Gold</a>
+                           <ul class="source-submenu">
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source1.0.1" name="source" value="yes">
+                                 <label for="source1.0.1"><a>Все</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source1.1.1" name="source" value="yes">
+                                 <label for="source1.1.1"><span class="_icon-resource"></span><a>Ресурс</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source1.2.1" name="source" value="yes">
+                                 <label for="source1.2.1"><span class="_icon-Vector"></span><a>Telegram</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source1.3.1" name="source" value="yes">
+                                 <label for="source1.3.1"><span class="_icon-gold"></span><a>Gold</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source1.4.1" name="source" value="yes">
+                                 <label for="source1.4.1"><span class="_icon-personal"></span><a>Личный</a></label>
+                              </li>
+                           </ul>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-date">
+                     <p class="date__info">13 июня 2021</p>
+                     <p class="date__time">16:20</p>
+                  </div>
+
+                  <div class="element__body-urgensy">
+                     <div class="element__body-urgensy-content">
+                        <div class="urgency">
+                           <li class="urgency-menu">
+                              <p class="urgency-logo"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture><img src="img/fire.png" alt="fire"><img src="img/fire.png" alt="fire"></p>
+                              <ul class="urgency-submenu">
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element">Нет</p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div class="element__body-location">
+                     <div class="location">
+                        <li class="location-menu">
+                           <p class="location-logo">МСК</p>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-status">
+                     <div class="status">
+                        <li class="status-menu">
+                           <span class="_icon-inDelivery"></span>
+                           <a>В доставке</a>
+                           <ul class="status-submenu">
+                              <li class="status-item -paid">
+                                 <span class="_icon-paid"></span>
+                                 <a>Оплачен</a>
+                              </li>
+                              <li class="status-item -inDelivery">
+                                 <span class="_icon-inDelivery"></span>
+                                 <a>В доставке</a>
+                              </li>
+                              <li class="status-item -expectation">
+                                 <span class="_icon-expectation"></span>
+                                 <a>В ожидании</a>
+                              </li>
+                              <li class="status-item -remortgaging">
+                                 <span class="_icon-remortgaging"></span>
+                                 <a>Перезаклад</a>
+                              </li>
+                              <li class="status-item -delivered">
+                                 <span class="_icon-delivered"></span>
+                                 <a>Доставлен</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-courier">
+                     <div class="courier">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+																<option>Выбрать</option>
+																<option>ABD</option>
+																<option>ASC</option>
+																<option>QWE</option>
+																<option>QWR</option>
+																<option>RTY</option>	
+																<option>ABD</option>
+																<option>ASC</option>
+																<option>QWE</option>
+																<option>QWR</option>
+																<option>RTY</option>
+															</select>
+                           </p>
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="element__body-warehouse">
+                     <div class="warehouse">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														 <option>Выбрать</option>
+														 <option>Склад 1</option>
+														 <option>Склад 2</option>
+														 <option>Склад 3</option>
+														 <option>Склад 4</option>
+													 </select>
+                           </p>
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="element__body-checkbox">
+                     <form action="">
+                        <input type="checkbox" class="custom-checkbox" id="checkbox-custom1" name="checkbox-custom" value="yes">
+                        <label for="checkbox-custom1"></label>
+                     </form>
+                  </div>
+
+               </div>
+
+            </div>
+            <!--  -->
+            <div class="orders__content">
+
+               <div class="orders__wrapper-element">
+                  <div class="element__time">
+                     <p>Сегодня</p>
+                  </div>
+               </div>
+
+               <div class="element__body">
+                  <div class="element__body-number">
+                     <p class="number__title">GG12SDASD32134</p>
+                  </div>
+
+                  <div class="element__body-source">
+                     <div class="source">
+                        <li class="source-menu">
+                           <span class="_icon-gold"></span>
+                           <a>Gold</a>
+                           <ul class="source-submenu">
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source2.0" name="source" value="yes">
+                                 <label for="source2.0"><a>Все</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source2.1" name="source" value="yes">
+                                 <label for="source2.1"><span class="_icon-resource"></span><a>Ресурс</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source2.2" name="source" value="yes">
+                                 <label for="source2.2"><span class="_icon-Vector"></span><a>Telegram</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source2.3" name="source" value="yes">
+                                 <label for="source2.3"><span class="_icon-gold"></span><a>Gold</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source2.4" name="source" value="yes">
+                                 <label for="source2.4"><span class="_icon-personal"></span><a>Личный</a></label>
+                              </li>
+                           </ul>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-date">
+                     <p class="date__info">13 июня 2021</p>
+                     <p class="date__time">16:20</p>
+                  </div>
+
+                  <div class="element__body-urgensy">
+                     <div class="element__body-urgensy-content">
+                        <div class="urgency">
+                           <li class="urgency-menu">
+                              <p class="urgency-logo"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture><img src="img/fire.png" alt="fire"><img src="img/fire.png" alt="fire"></p>
+                              <ul class="urgency-submenu">
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element">Нет</p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div class="element__body-location">
+                     <div class="location">
+                        <li class="location-menu">
+                           <p class="location-logo">МСК</p>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-status">
+                     <div class="status">
+                        <li class="status-menu">
+                           <span class="_icon-inDelivery"></span>
+                           <a>В доставке</a>
+                           <ul class="status-submenu">
+                              <li class="status-item -paid">
+                                 <span class="_icon-paid"></span>
+                                 <a>Оплачен</a>
+                              </li>
+                              <li class="status-item -inDelivery">
+                                 <span class="_icon-inDelivery"></span>
+                                 <a>В доставке</a>
+                              </li>
+                              <li class="status-item -expectation">
+                                 <span class="_icon-expectation"></span>
+                                 <a>В ожидании</a>
+                              </li>
+                              <li class="status-item -remortgaging">
+                                 <span class="_icon-remortgaging"></span>
+                                 <a>Перезаклад</a>
+                              </li>
+                              <li class="status-item -delivered">
+                                 <span class="_icon-delivered"></span>
+                                 <a>Доставлен</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-courier">
+                     <div class="courier">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+															 <option>Выбрать</option>
+															 <option>ABD</option>
+															 <option>ASC</option>
+															 <option>QWE</option>
+															 <option>QWR</option>
+															 <option>RTY</option>	
+															 <option>ABD</option>
+															 <option>ASC</option>
+															 <option>QWE</option>
+															 <option>QWR</option>
+															 <option>RTY</option>
+														 </select>
+                           </p>
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="element__body-warehouse">
+                     <div class="warehouse">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Выбрать</option>
+														<option>Склад 1</option>
+														<option>Склад 2</option>
+														<option>Склад 3</option>
+														<option>Склад 4</option>
+													</select>
+                           </p>
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="element__body-checkbox">
+                     <form action="">
+                        <input type="checkbox" class="custom-checkbox" id="checkbox-custom2" name="checkbox-custom" value="yes">
+                        <label for="checkbox-custom2"></label>
+                     </form>
+                  </div>
+
+               </div>
+
+            </div>
+            <!--  -->
+            <div class="orders__content">
+
+               <div class="orders__wrapper-element">
+                  <div class="element__time">
+                     <p>Сегодня</p>
+                  </div>
+               </div>
+
+               <div class="element__body">
+                  <div class="element__body-number">
+                     <p class="number__title">GG12SDASD32134</p>
+                  </div>
+
+                  <div class="element__body-source">
+                     <div class="source">
+                        <li class="source-menu">
+                           <span class="_icon-gold"></span>
+                           <a>Gold</a>
+                           <ul class="source-submenu">
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source3.0" name="source" value="yes">
+                                 <label for="source3.0"><a>Все</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source3.1" name="source" value="yes">
+                                 <label for="source3.1"><span class="_icon-resource"></span><a>Ресурс</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source3.2" name="source" value="yes">
+                                 <label for="source3.2"><span class="_icon-Vector"></span><a>Telegram</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source3.3" name="source" value="yes">
+                                 <label for="source3.3"><span class="_icon-gold"></span><a>Gold</a></label>
+                              </li>
+                              <li class="source-item">
+                                 <input type="checkbox" class="custom-checkbox" id="source3.4" name="source" value="yes">
+                                 <label for="source3.4"><span class="_icon-personal"></span><a>Личный</a></label>
+                              </li>
+                           </ul>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-date">
+                     <p class="date__info">13 июня 2021</p>
+                     <p class="date__time">16:20</p>
+                  </div>
+
+                  <div class="element__body-urgensy">
+                     <div class="element__body-urgensy-content">
+                        <div class="urgency">
+                           <li class="urgency-menu">
+                              <p class="urgency-logo">Нет</p>
+                              <ul class="urgency-submenu">
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                    <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element"><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt=""></picture></p>
+                                 </li>
+                                 <li class="urgency-item">
+                                    <p class="urgency-element">Нет</p>
+                                 </li>
+                              </ul>
+                           </li>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div class="element__body-location">
+                     <div class="location">
+                        <li class="location-menu">
+                           <p class="location-logo">МСК</p>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-status">
+                     <div class="status">
+                        <li class="status-menu">
+                           <span class="_icon-inDelivery"></span>
+                           <a>В доставке</a>
+                           <ul class="status-submenu">
+                              <li class="status-item -paid">
+                                 <span class="_icon-paid"></span>
+                                 <a>Оплачен</a>
+                              </li>
+                              <li class="status-item -inDelivery">
+                                 <span class="_icon-inDelivery"></span>
+                                 <a>В доставке</a>
+                              </li>
+                              <li class="status-item -expectation">
+                                 <span class="_icon-expectation"></span>
+                                 <a>В ожидании</a>
+                              </li>
+                              <li class="status-item -remortgaging">
+                                 <span class="_icon-remortgaging"></span>
+                                 <a>Перезаклад</a>
+                              </li>
+                              <li class="status-item -delivered">
+                                 <span class="_icon-delivered"></span>
+                                 <a>Доставлен</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </div>
+                  </div>
+
+                  <div class="element__body-courier">
+                     <div class="courier">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+															 <option>Выбрать</option>
+															 <option>ABD</option>
+															 <option>ASC</option>
+															 <option>QWE</option>
+															 <option>QWR</option>
+															 <option>RTY</option>	
+															 <option>ABD</option>
+															 <option>ASC</option>
+															 <option>QWE</option>
+															 <option>QWR</option>
+															 <option>RTY</option>
+														 </select>
+                           </p>
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="element__body-warehouse">
+                     <div class="warehouse">
+                        <form action="#">
+                           <p>
+                              <select class="turnintodropdown">
+														<option>Выбрать</option>
+														<option>Склад 1</option>
+														<option>Склад 2</option>
+														<option>Склад 3</option>
+														<option>Склад 4</option>
+													</select>
+                           </p>
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="element__body-checkbox">
+                     <form action="">
+                        <input type="checkbox" class="custom-checkbox" id="checkbox-custom3" name="checkbox-custom" value="yes">
+                        <label for="checkbox-custom3"></label>
+                     </form>
+                  </div>
+
+               </div>
+
+            </div>
+            <!--  -->
+         </section>
+
+         <section class="applications">
+            <div class="applications__body">
+
+               <div class="applications__title">
+                  <h2 class="applications__logo">Курьеры</h2>
+               </div>
+
+               <div class="applications__button">
+
+                  <div class="button__courier">
+                     <form action="#">
+                        <p>
+                           <select class="turnintodropdown">
+															<option>Выбрать</option>
+															<option>ABD</option>
+															<option>ASC</option>
+															<option>QWE</option>
+															<option>QWR</option>
+															<option>RTY</option>	
+															<option>ABD</option>
+															<option>ASC</option>
+															<option>QWE</option>
+															<option>QWR</option>
+															<option>RTY</option>
+													 </select>
+                        </p>
+                     </form>
+                  </div>
+
+                  <div class="button__copy">
+                     <button class="button__copy-element"><span class="_icon-copy"></span>Скопировать</button>
+                  </div>
+
+
+               </div>
+
+               <div class="applications__content">
+                  <div class="applications__content-body">
+
+                     <div class="body__wrapper">
+                        <h2 class="body__wrapper-number">G12SDASD32134</h2>
+                        <p class="body__wrapper-date">11 июня 2021 - 15:30</p>
+                        <p class="body__wrapper-urgency">Срочность: <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture>
+                        </p>
+                        <p class="body__wrapper-link"><a href="https://bit.ly/klj1234h">https://bit.ly/klj1234h</a></p>
+                        <p class="body__wrapper-meaning">1 Гвозди, 2 Цемент, 10 Кирпичи</p>
+                        <p>Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю.
+                        </p>
+                        <br>
+                        <p class="body__wrapper-end">==============================</p>
+                        <br>
+                     </div>
+                     <div class="body__wrapper">
+                        <h2 class="body__wrapper-number">G12SDASD32134</h2>
+                        <p class="body__wrapper-date">11 июня 2021 - 15:30</p>
+                        <p class="body__wrapper-urgency">Срочность: <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture>
+                        </p>
+                        <p class="body__wrapper-link"><a href="https://bit.ly/klj1234h">https://bit.ly/klj1234h</a></p>
+                        <p class="body__wrapper-meaning">1 Гвозди, 2 Цемент, 10 Кирпичи</p>
+                        <p>Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю.
+                        </p>
+                        <br>
+                        <p class="body__wrapper-end">==============================</p>
+                        <br>
+                     </div>
+                     <div class="body__wrapper">
+                        <h2 class="body__wrapper-number">G12SDASD32134</h2>
+                        <p class="body__wrapper-date">11 июня 2021 - 15:30</p>
+                        <p class="body__wrapper-urgency">Срочность: <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture>
+                        </p>
+                        <p class="body__wrapper-link"><a href="https://bit.ly/klj1234h">https://bit.ly/klj1234h</a></p>
+                        <p class="body__wrapper-meaning">1 Гвозди, 2 Цемент, 10 Кирпичи</p>
+                        <p>Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю.
+                        </p>
+                        <br>
+                        <p class="body__wrapper-end">==============================</p>
+                        <br>
+                     </div>
+                     <div class="body__wrapper">
+                        <h2 class="body__wrapper-number">G12SDASD32134</h2>
+                        <p class="body__wrapper-date">11 июня 2021 - 15:30</p>
+                        <p class="body__wrapper-urgency">Срочность: <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture>
+                        </p>
+                        <p class="body__wrapper-link"><a href="https://bit.ly/klj1234h">https://bit.ly/klj1234h</a></p>
+                        <p class="body__wrapper-meaning">1 Гвозди, 2 Цемент, 10 Кирпичи</p>
+                        <p>Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю. Съешь ещё этих мягких французских булок, да выпей чаю.
+                        </p>
+                        <br>
+                        <p class="body__wrapper-end">==============================</p>
+                        <br>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <div class="up">
+            <a href="#" class="up-btn"><i class="_icon-up"></i></a>
+         </div>
+
+         
+      </main>
+      
+   </div>
+
+<script src="js/delivery.js"></script>
+
+</body>
+
+</html>
