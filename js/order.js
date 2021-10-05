@@ -17,7 +17,6 @@ testWebP(function(support) {
    }
 });
 /*Поддерживает ли браузер WebP изображение, если да body + class'webp' or 'no-webp' */
-
 /*Опеределение устройства (Pc, Touch) ////////////////////////////////////////////////////////////////////////////////////////// */
 const isMobile = {
    Android: function() {
@@ -275,10 +274,39 @@ const src_items = {
    gold: "Gold",
    res: "Ресурс"
 }
+const src_items_icons = {
+   "Telegram": "_icon-Vector",
+   "Личный": "_icon-personal",
+   "Gold": "_icon-gold",
+   "Ресурс": "_icon-resource"
+}
+const to_items = {
+   msk: "МСК",
+   spb: "СПБ",
+   ckad: "ЦКАД",
+}
+
 const need_items = {
-   sneakers: "img/sneakers.png",
-   rocket: "img/rocket.png",
+   fire: "fire",
+   twoFire: "twoFire",
+   threeFire: "threeFire",
+   rocket: "rocket",
+   sneakers: "sneakers",
    no: "Нет"
+}
+
+const status_items = {
+   paid: "Оплачен",
+   delivery: "В доставке",
+   waiting: "В ожидании",
+   remortgage: "Перезаклад",
+   delivered: "Доставлен",
+}
+const status_items_icons = {
+   "Оплачен": "_icon-paid",
+   "В ожидании": "_icon-expectation",
+   "Перезаклад": "_icon-remortgaging",
+   "Доставлен": "_icon-delivered"
 }
 
 const item_test = new ItemModel({
@@ -299,12 +327,12 @@ const item_test2 = new ItemModel({
 const order1 = new OrderModel({
    text: "text123",
    src: src_items.telegram,
-   date: "23.04.2021",
+   date: "04.10.2021",
    time: "23:04",
-   needed: need_items.sneakers,
-   to: "Москва",
+   needed: need_items.threeFire,
+   to: to_items.spb,
    code: 120,
-   status: "Перезаклад",
+   status: status_items.paid,
    address: "ул. Пушкина",
    comments: "Комментарий Комментарий Комментарий Комментарий Комментарий",
    items: [item_test,item_test2],
@@ -315,12 +343,12 @@ const order1 = new OrderModel({
 const order2 = new OrderModel({
    text: "text12233",
    src: src_items.res,
-   date: "23.04.2081",
+   date: "01.10.2021",
    time: "03:04",
    needed: need_items.sneakers,
-   to: "Москва",
+   to: to_items.msk,
    code: 120,
-   status: "Перезаклад",
+   status: status_items.waiting,
    address: "ул. Колотушкина",
    comments: "Комментарий Комментарий Комментарий Комментарий Комментарий",
    items: [item_test,item_test2],
@@ -328,133 +356,266 @@ const order2 = new OrderModel({
    price: 10000,
    manager: "Grusha",
 })
-let orders = [order1,order2];
+const order3 = new OrderModel({
+   text: "G230135",
+   src: src_items.self,
+   date: "07.09.2021",
+   time: "03:04",
+   needed: need_items.fire,
+   to: to_items.ckad,
+   code: 120,
+   status: status_items.remortgage,
+   address: "ул. Колотушкина",
+   comments: "Комментарий Комментарий Комментарий Комментарий Комментарий",
+   items: [item_test,item_test2],
+   deliveryPrice: 2452,
+   price: 10000,
+   manager: "Name 2",
+})
+let orders = [order1,order2,order3];
 const orders_element = document.querySelector(".orders");
 
+// Объект в котором хранятся все параметры сортировки
+let sortParams = { };
 
-orders.forEach(order => {
-   const html = `<div class="orders__content">
 
-   <div class="orders__wrapper-element">
-      <div class="element__time"></div>
-      <p>Сегодня</p>
-   </div>
+printOrderRows()
+function printOrderRows() {
+   const rows_table = document.querySelector("section.orders")
+   rows_table.innerHTML = null;
 
-   <div class="element__body">
-      <div class="element__body-number">
-         <p class="number__title">${order.text}</p>
+   orders.forEach(order => {
+      const [day, month, year] = order.date.split(".")
+      const date = new Date();
+      const orderDate = new Date((Date.UTC(year,month - 1,day)));
+      const diffDays = Math.floor((date - orderDate) / (1000 * 60 * 60 * 24));
+      // Сортировка по номеру заказа
+      if(sortParams.text && !order.text.toLowerCase().includes(sortParams.text.toLowerCase()))
+         return;
+      // Сортировка по источнику
+      if(sortParams.source && sortParams.source.length > 0 && sortParams.source[0] !== "Все") {
+         let success = false;
+         sortParams.source.forEach(source => {
+            if(order.src === source){
+               success = true;
+               return;
+            }
+         })
+         if(!success)
+            return;
+      }
+      // Сортировка по дате
+      if(sortParams.date && sortParams.date.length > 0) {
+         let success = false;
+         sortParams.date.forEach(date => {
+            switch (date) {
+               case "Сегодня":
+                  if(diffDays === 0)
+                     success = true;
+                  break;
+               case "Вчера":
+                  if(diffDays === 1)
+                     success = true;
+                  break;
+               case "2 дня":
+                  if(diffDays <= 2 && diffDays >= 0)
+                     success = true;
+                  break;
+               case "3 дня":
+                  if(diffDays <= 3 && diffDays >= 0)
+                     success = true;
+                  break;
+               case "Неделя":
+                  if(diffDays <= 7 && diffDays >= 0)
+                     success = true;
+                  break;
+            }
+         })
+         if(!success)
+            return;
+      }
+      // Сортировка по менеджеру 
+      if(sortParams.manager && sortParams.manager.length > 0) {
+         let success = false;
+         sortParams.manager.forEach(manager => {
+            if(order.manager === manager.trim()){
+               success = true;
+               return;
+            }
+         })
+         if(!success)
+            return;
+      }
+      // Сортировка по статусу
+      if(sortParams.status && sortParams.status.length > 0) {
+         let success = false;
+         sortParams.status.forEach(status => {
+            if(order.status === status){
+               success = true;
+               return;
+            }
+         })
+         if(!success)
+            return;
+      }
+      // Сортировка по городу
+      if(sortParams.destination && sortParams.destination.length > 0 && sortParams.destination[0] !== "Все") {
+         let success = false;
+         sortParams.destination.forEach(dest => {  
+            if(order.to === dest.trim()) {
+               success = true;
+               return;
+            }
+         })
+         if(!success)
+            return;
+      }
+      // Сортировка по срочности
+      if(sortParams.urgency && sortParams.urgency.length > 0 && sortParams.urgency[0] !== "Все") {
+         let success = false;
+         sortParams.urgency.forEach(u => {
+            if(order.needed === u) {
+               success = true;
+               return;
+            }
+         })
+         if(!success)
+            return;
+      }
+      const html = `<div class="orders__content">
+   
+      <div class="orders__wrapper-element">
+         <div class="element__time"></div>
+         <p>${diffDays === 0 ? 'Сегодня' : diffDays === 1 ? 'Вчера' : `${diffDays} дней назад`}</p>
       </div>
-
-      <div class="element__body-source">
-         <div class="source">
-            <li class="source-menu">
-               <span class="_icon-gold"></span>
-               <p>${order.src}</p>
-            </li>
+   
+      <div class="element__body">
+         <div class="element__body-number">
+            <p class="number__title">${order.text}</p>
          </div>
-      </div>
-
-      <div class="element__body-date">
-         <p class="date__info">${order.date}</p>
-         <p class="date__time">${order.time}</p>
-      </div>
-
-      <div class="element__body-manager">
-         <p class="manager">${order.manager}</p>
-      </div>
-
-      <div class="element__body-urgency-wrapper">
-         <div class="element__body-urgency">
-            <div class="urgency">
-               <li class="urgency-menu">
-                  <p class="urgency-logo"><picture><source srcset="img/fire.webp" type="image/webp"><img src="${order.src}" alt="fire"></picture></p>
-                  <ul class="urgency-submenu">
-                     <li class="urgency-item">
-                        <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+   
+         <div class="element__body-source">
+            <div class="source">
+               <li class="source-menu">
+                  <span class="${src_items_icons[order.src]}"></span>
+                  <p>${order.src}</p>
+               </li>
+            </div>
+         </div>
+   
+         <div class="element__body-date">
+            <p class="date__info">${order.date}</p>
+            <p class="date__time">${order.time}</p>
+         </div>
+   
+         <div class="element__body-manager">
+            <p class="manager">${order.manager}</p>
+         </div>
+   
+         <div class="element__body-urgency-wrapper">
+            <div class="element__body-urgency">
+               <div class="urgency">
+                  <li class="urgency-menu">
+                     <p class="urgency-logo">
+                        ${order.needed === "threeFire" ? `
+                        <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/sneakers.png" alt="fire"></picture>
+                        <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/sneakers.png" alt="fire"></picture>
+                        <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/sneakers.png" alt="fire"></picture>
+                        ` : order.needed === "twoFire" ? `
+                        <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/sneakers.png" alt="fire"></picture>
+                        <picture><source srcset="img/fire.webp" type="image/webp"><img src="img/sneakers.png" alt="fire"></picture>
+                        ` : `
+                        <picture><source srcset="img/${order.needed}.webp" type="image/webp"><img src="img/${order.needed}.png" alt="fire"></picture>
+                        `}
+                     </p>
+                     <ul class="urgency-submenu">
+                        <li class="urgency-item">
+                           <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                        </li>
+                        <li class="urgency-item">
+                           <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                           <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                        </li>
+                        <li class="urgency-item">
+                           <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                           <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                           <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                        </li>
+                        <li class="urgency-item">
+                           <p class="urgency-element"><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt="rocket"></picture></p>
+                        </li>
+                        <li class="urgency-item">
+                           <p class="urgency-element"><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt="sneakers"></picture></p>
+                        </li>
+                        <li class="urgency-item">
+                           <p class="urgency-element">Нет</p>
+                        </li>
+                     </ul>
+                  </li>
+               </div>
+            </div>
+         </div>
+   
+         <div class="element__body-location">
+            <div class="location">
+               <li class="location-menu">
+                  <p class="location-logo">${order.to}</p>
+               </li>
+            </div>
+         </div>
+   
+         <div class="element__body-status">
+            <div class="status">
+               <li class="status-menu">
+                  <span class="${status_items_icons[order.status]}"></span>
+                  <a>${order.status}</a>  
+                  <ul class="status-submenu">
+                     <li class="status-item -paid">
+                        <span class="_icon-paid"></span>
+                        <a>Оплачен</a>
                      </li>
-                     <li class="urgency-item">
-                        <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
-                        <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                     <li class="status-item -inDelivery">
+                        <span class="_icon-inDelivery"></span>
+                        <a>В доставке</a>
                      </li>
-                     <li class="urgency-item">
-                        <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
-                        <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
-                        <p class="urgency-element"><picture><source srcset="img/fire.webp" type="image/webp"><img src="img/fire.png" alt="fire"></picture></p>
+                     <li class="status-item -expectation">
+                        <span class="_icon-expectation"></span>
+                        <a>В ожидании</a>
                      </li>
-                     <li class="urgency-item">
-                        <p class="urgency-element"><picture><source srcset="img/rocket.webp" type="image/webp"><img src="img/rocket.png" alt="rocket"></picture></p>
+                     <li class="status-item -remortgaging">
+                        <span class="_icon-remortgaging"></span>
+                        <a>Перезаклад</a>
                      </li>
-                     <li class="urgency-item">
-                        <p class="urgency-element"><picture><source srcset="img/sneakers.webp" type="image/webp"><img src="img/sneakers.png" alt="sneakers"></picture></p>
-                     </li>
-                     <li class="urgency-item">
-                        <p class="urgency-element">Нет</p>
+                     <li class="status-item -delivered">
+                        <span class="_icon-delivered"></span>
+                        <a>Доставлен</a>
                      </li>
                   </ul>
                </li>
             </div>
          </div>
+   
       </div>
+   
+   </div>`;
+   const path = orders_element.children[orders_element.children.length - 1];
+   const placeholder = document.createElement('div');
+   placeholder.innerHTML = html;
+   const node = placeholder.firstElementChild;
 
-      <div class="element__body-location">
-         <div class="location">
-            <li class="location-menu">
-               <p class="location-logo">${order.to}</p>
-            </li>
-         </div>
-      </div>
+   node.addEventListener("click", (e) => openCreatedOrder(e,node,order))
+   if(path)
+      path.insertAdjacentElement("afterend", node);
+   else
+      orders_element.insertAdjacentElement("beforeend", node)
+   });
+}
 
-      <div class="element__body-status">
-         <div class="status">
-            <li class="status-menu">
-               <span class="_icon-inDelivery"></span>
-               <a>В доставке</a>
-               <ul class="status-submenu">
-                  <li class="status-item -paid">
-                     <span class="_icon-paid"></span>
-                     <a>Оплачен</a>
-                  </li>
-                  <li class="status-item -inDelivery">
-                     <span class="_icon-inDelivery"></span>
-                     <a>В доставке</a>
-                  </li>
-                  <li class="status-item -expectation">
-                     <span class="_icon-expectation"></span>
-                     <a>В ожидании</a>
-                  </li>
-                  <li class="status-item -remortgaging">
-                     <span class="_icon-remortgaging"></span>
-                     <a>Перезаклад</a>
-                  </li>
-                  <li class="status-item -delivered">
-                     <span class="_icon-delivered"></span>
-                     <a>Доставлен</a>
-                  </li>
-               </ul>
-            </li>
-         </div>
-      </div>
 
-   </div>
-
-</div>`;
-
-const path = orders_element.children[orders_element.children.length - 1];
-const placeholder = document.createElement('div');
-placeholder.innerHTML = html;
-const node = placeholder.firstElementChild;
-
-node.addEventListener("click", (e) => openCreatedOrder(e,node,order))
-if(path)
-   path.insertAdjacentElement("afterend", node);
-else
-   orders_element.insertAdjacentElement("beforeend", node)
-});
 
 import Popup from "./popup.js";
 
 function openCreatedOrder(e, node, order) {
-   console.log(e.path)
    if(e.target.localName === "img" 
    || e.target.localName === "li"
    || e.target.localName === "ul"
@@ -464,4 +625,63 @@ function openCreatedOrder(e, node, order) {
       return;
    const popup = new Popup(order,node);
    popup.show();
+}
+
+// wrapper-function
+const debounce = (fn, ms) => {
+   let timeout;
+   return function() {
+      const fnCall = () => { fn.apply(this, arguments) }
+
+      clearTimeout(timeout);
+
+      timeout = setTimeout(fnCall, ms);
+  }
+}
+
+// HEADER-SORT
+function sortInputOnChange(e) {
+   sortParams.text = e.target.value;
+   printOrderRows();
+}
+
+sortInputOnChange = debounce(sortInputOnChange, 300);
+const header_sort_input = document.querySelector("form.search input");
+header_sort_input.addEventListener("keyup",sortInputOnChange);
+
+const menu_sub_btns = document.querySelectorAll(".menu__sub-button");
+menu_sub_btns.forEach(el => el.addEventListener("click",sortBtnObClick));
+
+function sortBtnObClick(e) {
+   const ulParent = e.target.parentElement.parentElement;
+   const key = ulParent.parentElement.classList.value.split("-")[1];
+
+   let value = [];
+
+   for(let i = 0; i < ulParent.children.length - 1; i++) {
+      let el = ulParent.children[i];
+      console.log(el.children[1].children[0].children[0].children.length)
+      if(el.children[0].checked) {
+         if(el.children[1].children[0].children[1]){
+            value.push(el.children[1].children[0].children[1].textContent);
+         } else if(el.children[1].children[0].children[0].children.length > 1){
+            switch (el.children[1].children[0].children[0].children.length) {
+               case 3:
+                  value.push("threeFire")
+                  break;
+               case 2:
+                  value.push("twoFire")
+                  break;
+            }
+         }else if(el.children[1].children[0].children[0].children.length === 1 && el.children[1].children[0].children[0].children[0].localName === "picture") {
+            console.log(el.children[1].children[0].children[0].children[0].children[1])
+            value.push(el.children[1].children[0].children[0].children[0].children[1].alt);
+         } else {
+            value.push(el.children[1].children[0].children[0].textContent);
+         }
+      }
+   }
+
+   sortParams[key] = value;
+   printOrderRows();
 }

@@ -29,7 +29,16 @@ class Popup {
                         <div class="date__wrap"></div>
                      </div>
                      <div class="select-element" id="order-urgency">
-                        <span class="select-text"><img src="${this.order.needed}" /> </span>
+                        <span class="select-text">${this.order.needed === "threeFire" ? `
+                        <img src="img/fire.png" />
+                        <img src="img/fire.png" />
+                        <img src="img/fire.png" />
+                        ` : this.order.needed === "twoFire" ? `
+                        <img src="img/fire.png" />
+                        <img src="img/fire.png" />
+                        ` : `
+                        <img src="img/${this.order.needed}.png" />
+                        `}  </span>
                         <div class="popup-select-close"></div>
                      </div>
                 </div>
